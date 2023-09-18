@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/main.css" type="text/css" />
+    <title>Лаб. 1</title>
+    <link rel="shortcut icon" href="../media/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="barbie-mode">
+    <h2 class="header" id="student-info">Балин Артем Алексеевич P3212</h2>
+    <p class="mode" onclick="pic(1)" id="barbie-mode">Barbie mode on</p>
+    <p class="mode covered" onclick="pic(2)" id="openheimer-mode">
+      Oppenheimer mode on
+    </p>
+    <div class="main-container">
+      <div class="form_container">
+        <form class="input-form">
+          <p>
+            <img src="../media/decart.png" class="decart" />
+          </p>
+          <div class="input-argument-container">
+            <label class="input-argument">X: </label>
+            <input
+              type="checkbox"
+              name="X-4"
+              onchange="uncheckboxes('-4')"
+              class="input-checkbox"
+            />
+            <label for="X-4">-4</label>
+            <input
+              type="checkbox"
+              name="X-3"
+              onchange="uncheckboxes('-3')"
+              class="input-checkbox"
+            />
+            <label for="X-3">-3</label>
+            <input
+              type="checkbox"
+              name="X-2"
+              onchange="uncheckboxes('-2')"
+              class="input-checkbox"
+            />
+            <label for="X-2">-2</label>
+            <input
+              type="checkbox"
+              name="X-1"
+              onchange="uncheckboxes('-1')"
+              class="input-checkbox"
+            />
+            <label for="X-1">-1</label>
+            <input
+              type="checkbox"
+              name="X-0"
+              onchange="uncheckboxes('-0')"
+              class="input-checkbox"
+            />
+            <label for="X-0">0</label>
+            <input
+              type="checkbox"
+              name="X+1"
+              onchange="uncheckboxes('+1')"
+              class="input-checkbox"
+            />
+            <label for="X+1">1</label>
+            <input
+              type="checkbox"
+              name="X+2"
+              onchange="uncheckboxes('+2')"
+              class="input-checkbox"
+            />
+            <label for="X+2">2</label>
+            <input
+              type="checkbox"
+              name="X+3"
+              onchange="uncheckboxes('+3')"
+              class="input-checkbox"
+            />
+            <label for="X+3">3</label>
+            <input
+              type="checkbox"
+              name="X+4"
+              onchange="uncheckboxes('+4')"
+              class="input-checkbox"
+            />
+            <label for="X+4">4</label>
+          </div>
+          <div class="input-argument-container">
+            <label class="input-argument">Y:</label>
+            <input
+              type="text"
+              class="text-input"
+              name="Y"
+              placeholder="Y: (-3...5)"
+              id="Y-input"
+            />
+          </div>
+          <div class="input-argument-container">
+            <label class="input-argument">R:</label>
+            <input
+              type="text"
+              class="text-input"
+              name="R"
+              placeholder="R: (2...5)"
+              id="R-input"
+            />
+          </div>
+          <input type="submit" onclick="sendForm()" value="Send it!" />
+        </form>
+        <p id="error-logs">
+          <br data-mce-bogus="1">
+        </p>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Result</th>
+            <th>In work</th>
+            <th>Received at</th>
+          </tr>
+          <tr></tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="../js/client.js"></script>
+  <script src="../js/formAction.js"></script>
+</html>

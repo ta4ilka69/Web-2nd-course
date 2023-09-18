@@ -1,0 +1,100 @@
+body {
+  display: block;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  margin: 0;
+  padding: 0;
+  font-family: ShantellSans;
+}
+
+.barbie-mode {
+  background: linear-gradient(#63ecef, #ff22c4);
+}
+
+.openheimer-mode {
+  background-image: url("../media/Oppenheimer-first-person-script-01-Mainstyle.webp");
+  min-height: 150vh;
+  max-height: 150vh;
+  background-position: center;
+}
+
+@font-face {
+  font-family: ShantellSans;
+  src: url(./fonts/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf),
+    url(./fonts/ShantellSans-Italic-VariableFont_BNCE\INFM\SPAC\wght.ttf),
+    url(./fonts/static/ShantellSans-Regular.ttf),
+    url(./fonts/static/ShantellSans-SemiBold.ttf);
+}
+p,
+h2,
+label {
+  text-align: center;
+}
+
+.mode {
+  font-size: 2em;
+  font-family: ShantellSans;
+  font-style: normal;
+}
+
+p:hover,
+h2:hover,label:hover {
+  color: #ff8f0e;
+}
+
+.covered {
+  display: none;
+}
+.header {
+  font-family: serif;
+}
+
+.decart {
+  width: 15vw;
+  border-radius: 100px;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+.form_container {
+  padding-left: 70px;
+}
+
+.input-form {
+  width: 40vw;
+  margin-top: 4vh;
+}
+
+.input-argument {
+  font-size: 20pt;
+  font-weight: bold;
+  margin-right: 4vh;
+}
+.text-input {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: #ffffff !important;
+  height: 15pt;
+  width: 30vw;
+  color: #cccccc;
+}
+input[type="text"]:hover, input[type="text"]:focus{
+  color: #4487e5;
+  border: 1.5px solid #fffb02;
+  border-radius: 4px;
+}
+
+input[type="submit"]{
+    margin-top: 5vh;
+    width: 35vw;
+    color: white;
+    background-color: #4487e5;
+}
+.table-container{
+  flex-direction: column;
+  align-content: center;
+}
