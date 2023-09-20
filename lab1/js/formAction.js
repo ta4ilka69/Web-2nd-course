@@ -1,55 +1,66 @@
-function sendForm(){
-    let x = validateX();
-    let y = validateY();
-    let r = validateR();
-    if(x&&y&&r){
-        console.log(x,y,z);
+function sendForm()  {
+  let x = validateX();
+  let y = validateY();
+  let r = validateR();
+  document.getElementById("error-logs").innerHTML = "";
+  if (isNumber(x) && isNumber(y) && isNumber(r)) {
+    console.log(x, y, r);
+  } else {
+    if (!isNumber(x)) {
+      document.getElementById("error-logs").innerHTML +=
+        "Choose one option for X! ";
     }
-    else{
-
-        if(!x){
-            $('.error-logs').text("X error");
-        }
+    if (!isNumber(y)) {
+      document.getElementById("error-logs").innerHTML +=
+        "Type float for Y from -3 to 5! ";
     }
-}
-
-function validateFloat(str){
-    let x = parseFloat(str.replace(',','.'));
-    if(isNumber(x)){
-        return x;
+    if (!isNumber(r)) {
+      document.getElementById("error-logs").innerHTML +=
+        "Type float for R from 2 to 5! ";
     }
-    return false;
+  }
+  clearAll();
 }
 
-function validateInt(str){
-    let x = parseInt(str);
-    if(isNumber(x)){
-        return x;
+function validateFloat(str) {
+  return parseFloat(str.replace(",", "."));
+}
+
+function validateX() {
+  let checkboxes = document.getElementsByClassName("input-checkbox");
+  let x = Infinity;
+  [].forEach.call(checkboxes, (el) => {
+    if (el.checked === true) {
+      x = parseInt(el.name.replace("X", ""));
     }
-    return false;
+  });
+  return x;
 }
 
-function validateX(){
-    let checkboxes = document.getElementsByClassName("input-checkbox");
-    [].forEach.call(checkboxes, (el)=>{
-        if(el.checked===true){
-            let x = validateInt(el.name.replace('X',''));
-            return x;
-        }
-    })
-    return false;
+function isNumber(x) {
+  return !isNaN(x) && isFinite(x) && x !== false;
 }
 
-function isNumber(x){
-    return !isNaN(x) && isFinite(x);
+function validateY() {
+  let y = validateFloat(document.getElementById("Y-input").value);
+  if (!(-3 <= y && y <= 5)) {
+    y = Infinity;
+  }
+  return y;
 }
 
-function validateY(){
-    let str = document.getElementById("Y-input").value;
-    return validateFloat(str);
+function validateR() {
+  let r = validateFloat(document.getElementById("R-input").value);
+  if (!(2 <= r && r <= 5)) {
+    r = Infinity;
+  }
+  return r;
 }
 
-function validateR(){
-    let str = document.getElementById("R-input").value;
-    return validateFloat(str);
+function clearAll(){
+  [].forEach.call(document.getElementsByClassName("input-checkbox"), el =>{
+    el.checked = false;
+  });
+  document.getElementById("Y-input").value = "";
+  document.getElementById("R-input").value = "";
 }
