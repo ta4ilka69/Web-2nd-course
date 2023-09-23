@@ -45,7 +45,6 @@ p:hover,
 h2:hover,label:hover {
   color: #ff8f0e;
 }
-
 .covered {
   display: none;
 }
@@ -105,9 +104,20 @@ table{
   margin-left: 5vw;
   margin-right: 5vw;
   border-collapse: collapse;
-  width: 44vw;
-  border: 1px solid #cccccc;
   border-radius: 3px;
-  background: #ffffff !important;
-  color: #cccccc;
+  background: #ffffff;
+  color: #ff00a6;
+  text-align: center;
+}
+td,th{
+  border: 2px solid #f515b5;
+}
+.argument-column{
+  width: 5vw;
+}
+.time-column{
+  width: 10vw;
+}
+.result-column{
+  width: 10vw;
 }
