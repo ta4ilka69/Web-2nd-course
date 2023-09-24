@@ -1,10 +1,18 @@
-function sendForm()  {
+function sendForm() {
   let x = validateX();
   let y = validateY();
   let r = validateR();
   document.getElementById("error-logs").innerHTML = "";
   if (isNumber(x) && isNumber(y) && isNumber(r)) {
-    console.log(x, y, r);
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://0.0.0.0:9003?x=" + x + "&y=" + y + "&r=" + r, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let response = xhr.responseText;
+        processResponse(response);
+      }
+    };
+    xhr.send();
   } else {
     if (!isNumber(x)) {
       document.getElementById("error-logs").innerHTML +=
@@ -20,6 +28,7 @@ function sendForm()  {
     }
   }
   clearAll();
+
 }
 
 function validateFloat(str) {
@@ -57,10 +66,50 @@ function validateR() {
   return r;
 }
 
-function clearAll(){
-  [].forEach.call(document.getElementsByClassName("input-checkbox"), el =>{
+function clearAll() {
+  [].forEach.call(document.getElementsByClassName("input-checkbox"), el => {
     el.checked = false;
   });
   document.getElementById("Y-input").value = "";
   document.getElementById("R-input").value = "";
+}
+
+function processResponse(response) {
+  let date = new Date();
+  let received = date.toLocaleString("ru", {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    timezone: 'UTC',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  });
+  let res = JSON.parse(response);
+  let x = res.x;
+  let y = res.y;
+  let r = res.r;
+  let result = res.result;
+  let time = res.time;
+  const table = document.getElementById("table-results");
+  const newRow = document.createElement("tr");
+  const xTd = document.createElement("td");
+  xTd.textContent = x;
+  const yTd = document.createElement("td");
+  yTd.textContent = y;
+  const rTd = document.createElement("td");
+  rTd.textContent = r;
+  const resultTd = document.createElement("td");
+  resultTd.textContent = result;
+  const timeTd = document.createElement("td");
+  timeTd.textContent = time;
+  const receivedTd = document.createElement("td");
+  receivedTd.textContent = received;
+  newRow.appendChild(xTd);
+  newRow.appendChild(yTd);
+  newRow.appendChild(rTd);
+  newRow.appendChild(resultTd);
+  newRow.appendChild(timeTd);
+  newRow.appendChild(receivedTd);
+  table.appendChild(newRow);
 }

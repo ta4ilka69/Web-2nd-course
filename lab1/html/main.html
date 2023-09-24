@@ -103,28 +103,20 @@
               id="R-input"
             />
           </div>
-          <input type="submit" value="Send it!" />
+          <input type="button" value="Send it!" onclick="sendForm()"/>
         </form>
         <p id="error-logs">
         </p>
       </div>
       <div class="table-container">
-        <table>
+        <table id="table-results">
           <tr>
             <th class="argument-column">X</th>
             <th class="argument-column">Y</th>
             <th class="argument-column">R</th>
             <th class="result-column">Result</th>
-            <th class="time-column">In work</th>
+            <th class="time-column">In work, s</th>
             <th class="time-column">Received at</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>Success</td>
-            <td>10</td>
-            <td>15</td>
           </tr>
         </table>
       </div>

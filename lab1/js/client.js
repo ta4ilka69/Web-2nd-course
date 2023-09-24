@@ -1,4 +1,5 @@
 var audio = new Audio("../media/gg.mp3");
+
 function pic(x) {
   if (x === 1) {
     document.body.classList = "openheimer-mode";
@@ -25,3 +26,4 @@ function uncheckboxes(x) {
     }
   });
 }
+
