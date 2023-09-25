@@ -1,4 +1,4 @@
-<?php
+<?php header('Access-Control-Allow-Origin: *');
 if (isset($_GET['x']) && isset($_GET['y']) && isset($_GET['r'])) {
     $start_time = microtime(true);
     $x = floatval($_GET['x']);
@@ -8,7 +8,7 @@ if (isset($_GET['x']) && isset($_GET['y']) && isset($_GET['r'])) {
     if (isPointInside($x, $y, $r)) {
         $result = "Success";
     }
-    $time = number_format(microtime(true) - $start_time, 4);
+    $time = number_format((microtime(true) - $start_time)*1000, 8);
     echo json_encode(array($x, $y, $r, $result, $time));
 }
 function isPointInside($x, $y, $r)

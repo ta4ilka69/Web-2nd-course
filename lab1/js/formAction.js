@@ -5,7 +5,7 @@ function sendForm() {
   document.getElementById("error-logs").innerHTML = "";
   if (isNumber(x) && isNumber(y) && isNumber(r)) {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://0.0.0.0:9003?x=" + x + "&y=" + y + "&r=" + r, true);
+    xhr.open("GET", "http://127.0.0.1:8888/serv.php?x=" + x + "&y=" + y + "&r=" + r, true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         let response = xhr.responseText;
@@ -86,25 +86,45 @@ function processResponse(response) {
     second: 'numeric',
   });
   let res = JSON.parse(response);
-  let x = res.x;
-  let y = res.y;
-  let r = res.r;
-  let result = res.result;
-  let time = res.time;
-  const table = document.getElementById("table-results");
-  const newRow = document.createElement("tr");
-  const xTd = document.createElement("td");
-  xTd.textContent = x;
-  const yTd = document.createElement("td");
-  yTd.textContent = y;
-  const rTd = document.createElement("td");
-  rTd.textContent = r;
-  const resultTd = document.createElement("td");
-  resultTd.textContent = result;
-  const timeTd = document.createElement("td");
-  timeTd.textContent = time;
-  const receivedTd = document.createElement("td");
-  receivedTd.textContent = received;
+  res.push(received);
+  addRowToTable(res);
+  let savedData = localStorage.getItem('data');
+  if (savedData) {
+    let data = JSON.parse(savedData);
+    data.push(res);
+    localStorage.setItem('data', JSON.stringify(data));
+  } else {
+    let data = [];
+    data.push(res);
+    localStorage.setItem('data', JSON.stringify(data));
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  let savedData = localStorage.getItem('data');
+  if (savedData) {
+    let data = JSON.parse(savedData);
+    data.forEach(function (item) {
+      addRowToTable(item);
+    });
+  }
+});
+
+function addRowToTable(data) {
+  let table = document.getElementById("table-results");
+  let newRow = document.createElement("tr");
+  let xTd = document.createElement("td");
+  xTd.textContent = data[0];
+  let yTd = document.createElement("td");
+  yTd.textContent = data[1];
+  let rTd = document.createElement("td");
+  rTd.textContent = data[2];
+  let resultTd = document.createElement("td");
+  resultTd.textContent = data[3];
+  let timeTd = document.createElement("td");
+  timeTd.textContent = data[4];
+  let receivedTd = document.createElement("td");
+  receivedTd.textContent = data[5];
   newRow.appendChild(xTd);
   newRow.appendChild(yTd);
   newRow.appendChild(rTd);
