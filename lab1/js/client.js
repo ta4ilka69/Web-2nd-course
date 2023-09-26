@@ -1,4 +1,4 @@
-var audio = new Audio("../media/gg.mp3");
+var audio = new Audio("./media/gg.mp3");
 
 function pic(x) {
   if (x === 1) {

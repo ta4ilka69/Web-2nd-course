@@ -1,11 +1,24 @@
-function sendForm() {
+const form = document.querySelector(".input-form");
+document.addEventListener("DOMContentLoaded",(e)=>{
+  
+});
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendForm();
+});
+
+function sendForm(){
   let x = validateX();
   let y = validateY();
   let r = validateR();
   document.getElementById("error-logs").innerHTML = "";
   if (isNumber(x) && isNumber(y) && isNumber(r)) {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://127.0.0.1:8888/serv.php?x=" + x + "&y=" + y + "&r=" + r, true);
+    xhr.open(
+      "GET",
+      "http://localhost:6969/serv.php?x=" + x + "&y=" + y + "&r=" + r,
+      true
+    );
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         let response = xhr.responseText;
@@ -28,7 +41,6 @@ function sendForm() {
     }
   }
   clearAll();
-
 }
 
 function validateFloat(str) {
@@ -67,7 +79,7 @@ function validateR() {
 }
 
 function clearAll() {
-  [].forEach.call(document.getElementsByClassName("input-checkbox"), el => {
+  [].forEach.call(document.getElementsByClassName("input-checkbox"), (el) => {
     el.checked = false;
   });
   document.getElementById("Y-input").value = "";
@@ -77,31 +89,31 @@ function clearAll() {
 function processResponse(response) {
   let date = new Date();
   let received = date.toLocaleString("ru", {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    timezone: 'UTC',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    timezone: "UTC",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
   });
   let res = JSON.parse(response);
   res.push(received);
   addRowToTable(res);
-  let savedData = localStorage.getItem('data');
+  let savedData = localStorage.getItem("data");
   if (savedData) {
     let data = JSON.parse(savedData);
     data.push(res);
-    localStorage.setItem('data', JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
   } else {
     let data = [];
     data.push(res);
-    localStorage.setItem('data', JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  let savedData = localStorage.getItem('data');
+document.addEventListener("DOMContentLoaded", function () {
+  let savedData = localStorage.getItem("data");
   if (savedData) {
     let data = JSON.parse(savedData);
     data.forEach(function (item) {

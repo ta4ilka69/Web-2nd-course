@@ -15,7 +15,7 @@ body {
 }
 
 .openheimer-mode {
-  background-image: url("../media/Oppenheimer-first-person-script-01-Mainstyle.webp");
+  background-image: url("./media/Oppenheimer-first-person-script-01-Mainstyle.webp");
   min-height: 100vh;
   max-height: 100vh;
   background-position: center;
