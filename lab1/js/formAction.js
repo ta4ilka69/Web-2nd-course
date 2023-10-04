@@ -133,6 +133,9 @@ function addRowToTable(data) {
   rTd.textContent = data[2];
   let resultTd = document.createElement("td");
   resultTd.textContent = data[3];
+  if(data[3]=="Success"){
+    resultTd.classList = "success";
+  }
   let timeTd = document.createElement("td");
   timeTd.textContent = data[4];
   let receivedTd = document.createElement("td");
