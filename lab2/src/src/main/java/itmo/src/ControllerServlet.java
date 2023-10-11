@@ -18,6 +18,7 @@ public class ControllerServlet extends HttpServlet {
         if (xParameter != null && yParameter != null && rParameter != null) {
             request.getServletContext().getRequestDispatcher("/area").forward(request, response);
         } else {
+            request.setAttribute("Points", request.getServletContext().getAttribute("Points"));
             request.getServletContext().getRequestDispatcher("/table.jsp").forward(request, response);
         }
     }

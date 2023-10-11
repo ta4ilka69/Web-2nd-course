@@ -279,7 +279,7 @@
                 <th class="time-column">In work, ms</th>
                 <th class="time-column">Received at</th>
             </tr>
-            <jsp:include page="table.jsp"/>
+            <tbody id="inner-table"></tbody>
         </table>
     </div>
 </div>

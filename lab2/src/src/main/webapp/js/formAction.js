@@ -7,6 +7,19 @@ svg.addEventListener("click", (e) => {
     if (isNumber(r)) {
         const mouseX = (e.clientX - svg.getBoundingClientRect().left - 150) / 60 * r / 2;
         const mouseY = -(e.clientY - svg.getBoundingClientRect().top - 150) / 60 * r / 2;
+        const data = {
+            "x": mouseX.toString(),
+            "y": mouseY.toString(),
+            "r": r.toString()
+        }
+        const params = new URLSearchParams(data).toString()
+        fetch("control", {
+            method: "POST",
+            body: params,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+        }).then(response => response.text()).then(response => processResponse(response)).catch(error => console.error("Error:", error));
     } else {
         errors.innerHTML += "Choose R before clicking!";
     }
@@ -106,7 +119,8 @@ function clearAll() {
 }
 
 function processResponse(response) {
-    console.log(response);
+    const table = document.getElementById("inner-table");
+    table.innerHTML = response;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
