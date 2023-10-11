@@ -15,6 +15,7 @@ public class AreaCheckServlet extends HttpServlet {
         long startTime = System.nanoTime();
         Date date = new Date(System.currentTimeMillis());
         ArrayList<String> Points = (ArrayList<String>) getServletContext().getAttribute("points");
+        System.out.println(Points);
         response.setContentType("text/html;charset=UTF-8");
         String xParameter = request.getParameter("x");
         String yParameter = request.getParameter("y");
@@ -26,8 +27,8 @@ public class AreaCheckServlet extends HttpServlet {
             String result = checkArea(x, y, r);
             String endTime = String.format("%.6f",(System.nanoTime()-startTime)/1000000.);
             Points.add(xParameter + " " + yParameter + " " + rParameter + " " + result+ " " + endTime +" "+ date);
-            request.setAttribute("points", Points);
-            getServletContext().setAttribute("points", Points);
+            request.setAttribute("Points", Points);
+            request.getServletContext().setAttribute("points", Points);
             request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
         catch (Exception e){

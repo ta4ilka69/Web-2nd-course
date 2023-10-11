@@ -279,7 +279,7 @@
                 <th class="time-column">In work, ms</th>
                 <th class="time-column">Received at</th>
             </tr>
-            <c:forEach items="${points}" var="point">
+            <c:forEach items="${Points}" var="point">
                 <tr>
                     <td>${point.split(' ')[0]}</td>
                     <td>${point.split(' ')[1]}</td>

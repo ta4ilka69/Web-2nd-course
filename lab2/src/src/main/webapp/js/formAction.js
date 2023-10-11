@@ -7,7 +7,6 @@ svg.addEventListener("click", (e) => {
     if (isNumber(r)) {
         const mouseX = (e.clientX - svg.getBoundingClientRect().left - 150) / 60 * r / 2;
         const mouseY = -(e.clientY - svg.getBoundingClientRect().top - 150) / 60 * r / 2;
-        console.log(mouseX, mouseY);
     } else {
         errors.innerHTML += "Choose R before clicking!";
     }
@@ -25,14 +24,15 @@ function sendForm() {
     console.log(x, y, r);
     errors.innerHTML = "";
     if (isNumber(x) && isNumber(y) && isNumber(r)) {
-        let data = new URLSearchParams();
-        data.append("x", x);
-        data.append("y", y);
-        data.append("r", r);
-
-        fetch("/app-1.0-SNAPSHOT", {
+        const data = {
+            "x": x.toString(),
+            "y": y.toString(),
+            "r": r.toString()
+        }
+        let params = new URLSearchParams(data).toString()
+        fetch("control", {
             method: "POST",
-            body: data,
+            body: params,
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             }
@@ -106,14 +106,21 @@ function clearAll() {
 }
 
 function processResponse(response) {
-    console.log(response);
+    return 0;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/app-1.0-SNAPSHOT")
-        .then(response => response.text())
+    const data = {}
+    let params = new URLSearchParams(data).toString()
+    fetch("control", {
+        method: "POST",
+        body: params,
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+    }).then(response => response.text())
         .then(response => {
-            console.log(response);
+            processResponse(response)
         })
         .catch(error => console.error("Error:", error));
 });

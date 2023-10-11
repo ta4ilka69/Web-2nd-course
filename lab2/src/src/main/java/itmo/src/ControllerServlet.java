@@ -1,5 +1,6 @@
 package itmo.src;
 
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class ControllerServlet extends HttpServlet {
         String xParameter = request.getParameter("x");
         String yParameter = request.getParameter("y");
         String rParameter = request.getParameter("r");
+        System.out.println(xParameter + " " + yParameter + " " + rParameter);
         if (xParameter != null && yParameter != null && rParameter != null) {
             request.getServletContext().getRequestDispatcher("/area").forward(request, response);
         } else {
