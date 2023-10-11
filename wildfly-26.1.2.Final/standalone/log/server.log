@@ -12642,3 +12642,507 @@ Caused by: java.lang.ClassNotFoundException: org.json.JSONObject from [Module "d
 2023-10-11 11:24:16,781 INFO  [stdout] (default task-4) null null null
 2023-10-11 11:24:17,991 INFO  [stdout] (default task-2) null null null
 2023-10-11 11:24:39,046 INFO  [stdout] (default task-2) null null null
+2023-10-11 11:30:05,117 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 82) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:30:05,123 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 87) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:30:05,124 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 87) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@7ca36bdd
+2023-10-11 11:30:05,124 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 87) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:30:05,129 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 12ms
+2023-10-11 11:30:05,141 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:30:05,191 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0272: Suspending server
+2023-10-11 11:30:05,194 INFO  [org.jboss.as.ejb3] (management-handler-thread - 1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-10-11 11:30:05,195 INFO  [org.jboss.as.server] (Management Triggered Shutdown) WFLYSRV0241: Shutting down in response to management operation 'shutdown'
+2023-10-11 11:30:05,199 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2023-10-11 11:30:05,205 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2023-10-11 11:30:05,206 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0019: Host default-host stopping
+2023-10-11 11:30:05,207 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTPS listener https suspending
+2023-10-11 11:30:05,208 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2023-10-11 11:30:05,210 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2023-10-11 11:30:05,213 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTP listener default suspending
+2023-10-11 11:30:05,213 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2023-10-11 11:30:05,214 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 88) WFLYCLINF0003: Stopped http-remoting-connector cache from ejb container
+2023-10-11 11:30:05,215 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 2.2.19.Final stopping
+2023-10-11 11:30:05,223 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) stopped in 23ms
+2023-10-11 11:30:10,271 INFO  [org.jboss.modules] (main) JBoss Modules version 2.0.2.Final
+2023-10-11 11:30:10,624 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.13.Final
+2023-10-11 11:30:10,629 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2023-10-11 11:30:10,699 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) starting
+2023-10-11 11:30:10,700 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	file.encoding = Cp1251
+	file.separator = \
+	java.awt.headless = true
+	java.class.path = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\jboss-modules.jar
+	java.class.version = 61.0
+	java.home = C:\Program Files\Java\jdk-17.0.4.1
+	java.io.tmpdir = C:\Users\art\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk-17.0.4.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk-17.0.4.1\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\art\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\art\AppData\Local\Programs\Python\Python310\;C:\Users\art\AppData\Local\Microsoft\WindowsApps;C:\Users\art\private\programms\Microsoft VS Code\bin;C:\Users\art\AppData\Local\GitHubDesktop\bin;C:\Users\art\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\bin;;C:\Users\art\.dotnet\tools;C:\php\;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 17.0.4.1+1-LTS-2
+	java.security.manager = allow
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 17
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = https://java.oracle.com/
+	java.vendor.url.bug = https://bugreport.java.com/bugreport/
+	java.version = 17.0.4.1
+	java.version.date = 2022-08-18
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 17
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 17.0.4.1+1-LTS-2
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final
+	jboss.host.name = art
+	jboss.modules.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = art
+	jboss.qualified.host.name = art
+	jboss.server.base.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone
+	jboss.server.config.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration
+	jboss.server.data.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\data
+	jboss.server.deploy.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\data\content
+	jboss.server.log.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\log
+	jboss.server.name = art
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\tmp
+	jdk.debug = release
+	line.separator = 
+
+	logging.configuration = file:F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration/logging.properties
+	module.path = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\modules
+	native.encoding = Cp1251
+	org.jboss.boot.log.file = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Windows 11
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.library.path = C:\Program Files\Java\jdk-17.0.4.1\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\jboss-modules.jar -mp F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\modules org.jboss.as.standalone -Djboss.home.dir=F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1251
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = RU
+	user.dir = F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\bin
+	user.home = C:\Users\art
+	user.language = ru
+	user.name = art
+	user.script = 
+	user.timezone = GMT+03:00
+	user.variant = 
+2023-10-11 11:30:10,702 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Djava.security.manager=allow -Dorg.jboss.boot.log.file=F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\log\server.log -Dlogging.configuration=file:F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration/logging.properties 
+2023-10-11 11:30:11,211 INFO  [org.wildfly.security] (ServerService Thread Pool -- 27) ELY00001: WildFly Elytron version 1.19.1.Final
+2023-10-11 11:30:11,808 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-10-11 11:30:11,827 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.8.7.Final
+2023-10-11 11:30:11,835 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.8.7.Final
+2023-10-11 11:30:11,858 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 56) WFLYRS0016: RESTEasy version 4.7.7.Final
+2023-10-11 11:30:11,865 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 52) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2023-10-11 11:30:11,870 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 53) WFLYHEALTH0001: Activating Base Health Subsystem
+2023-10-11 11:30:11,875 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 65) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2023-10-11 11:30:11,875 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2023-10-11 11:30:11,875 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 54) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-10-11 11:30:11,877 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 64) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2023-10-11 11:30:11,886 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 61) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2023-10-11 11:30:11,907 INFO  [org.wildfly.extension.microprofile.opentracing] (ServerService Thread Pool -- 66) WFLYTRACEXT0001: Activating MicroProfile OpenTracing Subsystem
+2023-10-11 11:30:11,907 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 63) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2023-10-11 11:30:11,908 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2023-10-11 11:30:11,908 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2023-10-11 11:30:12,020 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 2.2.19.Final starting
+2023-10-11 11:30:12,022 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2023-10-11 11:30:12,054 INFO  [org.jboss.as.connector] (MSC service thread 1-5) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 1.5.3.Final)
+2023-10-11 11:30:12,065 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2023-10-11 11:30:12,069 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-10-11 11:30:12,069 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-10-11 11:30:12,101 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY00023: KeyStore file 'F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\application.keystore' does not exist. Used blank.
+2023-10-11 11:30:12,132 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-5) WFLYELY01084: KeyStore F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self-signed certificate for host localhost
+2023-10-11 11:30:12,135 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 55) WFLYIO001: Worker 'default' has auto-configured to 24 IO threads with 192 max task threads based on your 12 available processors
+2023-10-11 11:30:12,149 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path 'F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2023-10-11 11:30:12,192 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 48 (per class), which is derived from the number of CPUs on this host.
+2023-10-11 11:30:12,192 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 192 (per class), which is derived from thread worker pool sizing.
+2023-10-11 11:30:12,227 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 5.0.25.Final
+2023-10-11 11:30:12,230 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+2023-10-11 11:30:12,232 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) Queuing requests.
+2023-10-11 11:30:12,235 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0018: Host default-host starting
+2023-10-11 11:30:12,300 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2023-10-11 11:30:12,332 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2023-10-11 11:30:12,423 INFO  [org.jboss.as.patching] (MSC service thread 1-4) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2023-10-11 11:30:12,433 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-6) WFLYDS0013: Started FileSystemDeploymentService for directory F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\deployments
+2023-10-11 11:30:12,485 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2023-10-11 11:30:12,505 INFO  [org.jboss.ws.common.management] (MSC service thread 1-7) JBWS022052: Starting JBossWS 5.5.0.Final (Apache CXF 3.4.7) 
+2023-10-11 11:30:12,535 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-10-11 11:30:12,591 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2023-10-11 11:30:12,593 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 26.1.2.Final (WildFly Core 18.1.2.Final) started in 2566ms - Started 298 of 538 services (337 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml
+2023-10-11 11:30:12,594 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-10-11 11:30:12,594 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-10-11 11:30:13,778 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:30:14,212 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:30:14,266 INFO  [org.jipijapa] (MSC service thread 1-1) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:30:14,516 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:30:14,602 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 6.0.23.Final
+2023-10-11 11:30:14,792 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 31) ISPN000128: Infinispan version: Infinispan 'Triskaidekaphobia' 13.0.10.Final
+2023-10-11 11:30:14,922 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-4) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:30:14,925 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-4) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@1d5f289b, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:30:14,937 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 31) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:30:14,975 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:30:15,006 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.spi.marshalling.InfinispanProtoStreamMarshaller'
+2023-10-11 11:30:15,054 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 3.1.9 (Final)
+2023-10-11 11:30:15,371 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 78) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:30:15,376 INFO  [org.infinispan.CONFIG] (MSC service thread 1-6) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-10-11 11:30:15,376 INFO  [org.infinispan.CONFIG] (MSC service thread 1-6) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2023-10-11 11:30:15,383 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 78) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:30:15,385 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 31) ISPN000025: wakeUpInterval is <= 0, not starting expired purge thread
+2023-10-11 11:30:15,387 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) WFLYCLINF0002: Started http-remoting-connector cache from ejb container
+2023-10-11 11:30:15,424 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 78) HHH000412: Hibernate Core {5.3.28.Final}
+2023-10-11 11:30:15,425 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 78) HHH000206: hibernate.properties not found
+2023-10-11 11:30:15,539 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 78) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+2023-10-11 11:30:15,592 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 78) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:30:15,704 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 78) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:30:15,740 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 78) Envers integration enabled? : true
+2023-10-11 11:30:16,230 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 18) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:30:16,250 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:30:23,177 INFO  [stdout] (default task-2) null null null
+2023-10-11 11:30:35,788 INFO  [stdout] (default task-2) 0 -3 3
+2023-10-11 11:30:35,788 INFO  [stdout] (default task-2) [1 2 3 success 1.5 1]
+2023-10-11 11:31:23,310 INFO  [stdout] (default task-2) null null null
+2023-10-11 11:39:54,668 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 18) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:39:54,683 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:39:54,685 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 81) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@39361181
+2023-10-11 11:39:54,687 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:39:54,701 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 36ms
+2023-10-11 11:39:54,714 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:39:54,762 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:39:54,993 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:39:55,004 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:39:55,007 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:39:55,015 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 18) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:39:55,026 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 18) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:39:55,026 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 18) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:39:55,051 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-8) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:39:55,051 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-8) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@124ccb57, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:39:55,054 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:39:55,077 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 18) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:39:55,078 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 18) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:39:55,082 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 18) Envers integration enabled? : true
+2023-10-11 11:39:55,189 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 18) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:39:55,205 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:40:00,513 INFO  [stdout] (default task-2) null null null
+2023-10-11 11:40:38,326 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:40:38,333 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 84) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:40:38,334 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 84) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@50b0cbd
+2023-10-11 11:40:38,334 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 84) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:40:38,339 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 12ms
+2023-10-11 11:40:38,352 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:40:38,406 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:40:38,602 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:40:38,614 INFO  [org.jipijapa] (MSC service thread 1-4) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:40:38,617 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:40:38,622 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 83) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:40:38,633 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 83) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:40:38,634 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 83) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:40:38,653 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-2) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:40:38,653 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-2) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@70b6be3d, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:40:38,656 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:40:38,677 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 83) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:40:38,677 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 83) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:40:38,679 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 83) Envers integration enabled? : true
+2023-10-11 11:40:38,765 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 83) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:40:38,775 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:40:41,236 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:40:59,930 INFO  [stdout] (default task-1) -1 0 2
+2023-10-11 11:40:59,931 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1]
+2023-10-11 11:41:54,414 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 85) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:41:54,420 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 86) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:41:54,421 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 86) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@76c7678f
+2023-10-11 11:41:54,421 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 86) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:41:54,427 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 13ms
+2023-10-11 11:41:54,440 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:41:54,456 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 1) org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0081: Failed to back up F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\standalone.xml: org.jboss.as.controller.persistence.ConfigurationPersistenceException: WFLYCTL0081: Failed to back up F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\standalone.xml
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.persistence.ConfigurationFile.backup(ConfigurationFile.java:597)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.persistence.ConfigurationFilePersistenceResource.doCommit(ConfigurationFilePersistenceResource.java:71)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.persistence.AbstractFilePersistenceResource.commit(AbstractFilePersistenceResource.java:63)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl$3.commit(ModelControllerImpl.java:788)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.AbstractOperationContext.executeDoneStage(AbstractOperationContext.java:889)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.AbstractOperationContext.processStages(AbstractOperationContext.java:803)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.AbstractOperationContext.executeOperation(AbstractOperationContext.java:466)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.OperationContextImpl.executeOperation(OperationContextImpl.java:1427)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl.internalExecute(ModelControllerImpl.java:449)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl.lambda$executeForResponse$0(ModelControllerImpl.java:260)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.SecurityIdentity.runAs(SecurityIdentity.java:304)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.SecurityIdentity.runAs(SecurityIdentity.java:270)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl.executeForResponse(ModelControllerImpl.java:260)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl.executeOperation(ModelControllerImpl.java:254)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.ModelControllerImpl.execute(ModelControllerImpl.java:237)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.doExecute(ModelControllerClientOperationHandler.java:241)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler.access$400(ModelControllerClientOperationHandler.java:139)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:163)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1$1.run(ModelControllerClientOperationHandler.java:159)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.SecurityIdentity.runAs(SecurityIdentity.java:328)
+	at org.wildfly.security.elytron-base@1.19.1.Final//org.wildfly.security.auth.server.SecurityIdentity.runAs(SecurityIdentity.java:285)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:254)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.AccessAuditContext.doAs(AccessAuditContext.java:225)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.remote.ModelControllerClientOperationHandler$ExecuteRequestHandler$1.execute(ModelControllerClientOperationHandler.java:159)
+	at org.jboss.as.protocol@18.1.2.Final//org.jboss.as.protocol.mgmt.ManagementRequestContextImpl$1.doExecute(ManagementRequestContextImpl.java:70)
+	at org.jboss.as.protocol@18.1.2.Final//org.jboss.as.protocol.mgmt.ManagementRequestContextImpl$AsyncTaskRunner.run(ManagementRequestContextImpl.java:160)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.JBossThread.run(JBossThread.java:513)
+Caused by: java.nio.file.FileSystemException: F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\standalone.xml -> F:\git\Web\Web-2nd-course\wildfly-26.1.2.Final\standalone\configuration\standalone_xml_history\current\standalone.v12.xml: Процесс не может получить доступ к файлу, так как этот файл занят другим процессом
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.persistence.ConfigurationFile.moveFile(ConfigurationFile.java:632)
+	at org.jboss.as.controller@18.1.2.Final//org.jboss.as.controller.persistence.ConfigurationFile.backup(ConfigurationFile.java:579)
+	... 31 more
+
+2023-10-11 11:41:54,495 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:41:54,735 INFO  [org.jboss.as.jpa] (MSC service thread 1-8) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:41:54,749 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:41:54,752 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:41:54,758 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 89) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:41:54,771 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 89) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:41:54,772 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 89) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:41:54,796 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-7) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:41:54,796 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-7) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@3ed89d49, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:41:54,799 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:41:54,824 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 89) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:41:54,825 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 89) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:41:54,827 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 89) Envers integration enabled? : true
+2023-10-11 11:41:54,918 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 86) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:41:54,931 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:41:59,546 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:42:05,706 INFO  [stdout] (default task-1) -1.5 0 2
+2023-10-11 11:42:05,706 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1]
+2023-10-11 11:43:44,875 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 89) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:43:44,881 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 94) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:43:44,881 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 94) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@70be9551
+2023-10-11 11:43:44,882 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 94) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:43:44,886 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 11ms
+2023-10-11 11:43:44,896 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:43:44,938 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:43:45,117 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:43:45,127 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:43:45,130 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:43:45,136 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 91) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:43:45,150 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 91) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:43:45,150 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 91) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:43:45,164 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-1) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:43:45,164 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-1) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@1b3bf130, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:43:45,167 INFO  [org.jipijapa] (MSC service thread 1-4) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:43:45,188 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 91) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:43:45,189 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 91) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:43:45,191 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 91) Envers integration enabled? : true
+2023-10-11 11:43:45,265 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 94) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:43:45,275 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:43:55,852 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:44:03,634 INFO  [stdout] (default task-1) -1.5 0 1.5
+2023-10-11 11:44:03,634 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1]
+2023-10-11 11:44:48,898 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 91) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:44:48,904 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 99) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:44:48,904 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 99) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@70886c71
+2023-10-11 11:44:48,905 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 99) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:44:48,909 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 11ms
+2023-10-11 11:44:48,920 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:44:48,963 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:44:49,108 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:44:49,121 INFO  [org.jipijapa] (MSC service thread 1-4) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:44:49,124 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:44:49,128 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 96) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:44:49,141 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 96) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:44:49,142 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 96) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:44:49,163 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-3) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:44:49,163 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-3) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@4da1619f, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:44:49,165 INFO  [org.jipijapa] (MSC service thread 1-1) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:44:49,186 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 96) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:44:49,186 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 96) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:44:49,189 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 96) Envers integration enabled? : true
+2023-10-11 11:44:49,258 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 96) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:44:49,271 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:44:53,771 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:44:57,898 INFO  [stdout] (default task-1) -0.5 0 2
+2023-10-11 11:44:57,898 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1]
+2023-10-11 11:45:20,978 INFO  [stdout] (default task-1) -0.5 0 2.5
+2023-10-11 11:45:20,978 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1, -0.5 0 2 success 0,172100 Wed Oct 11 11:44:57 GMT+03:00 2023]
+2023-10-11 11:47:19,431 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 99) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:47:19,435 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 102) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:47:19,436 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 102) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@4fc2f281
+2023-10-11 11:47:19,436 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 102) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:47:19,440 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 9ms
+2023-10-11 11:47:19,450 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:47:19,508 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:47:19,638 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:47:19,647 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:47:19,650 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:47:19,654 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 101) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:47:19,667 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 101) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:47:19,667 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 101) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:47:19,680 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-3) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:47:19,680 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-3) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@72702b3d, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:47:19,683 INFO  [org.jipijapa] (MSC service thread 1-2) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:47:19,702 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 101) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:47:19,702 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 101) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:47:19,705 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 101) Envers integration enabled? : true
+2023-10-11 11:47:19,774 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 102) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:47:19,786 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:47:24,679 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:47:31,778 INFO  [stdout] (default task-2) -1 0 2.5
+2023-10-11 11:47:31,778 INFO  [stdout] (default task-2) [1 2 3 success 1.5 1]
+2023-10-11 11:48:14,148 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 101) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:48:14,153 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:14,153 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 108) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@71eb4d8a
+2023-10-11 11:48:14,154 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 108) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:14,159 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 11ms
+2023-10-11 11:48:14,169 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:48:14,207 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:48:14,346 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:48:14,357 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:48:14,359 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:48:14,364 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 105) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:48:14,378 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 105) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:14,378 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 105) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:48:14,393 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-4) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:48:14,393 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-4) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@273bb015, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:48:14,395 INFO  [org.jipijapa] (MSC service thread 1-1) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:48:14,418 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 105) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:14,418 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 105) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:48:14,420 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 105) Envers integration enabled? : true
+2023-10-11 11:48:14,487 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 108) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:48:14,498 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:48:18,910 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:48:23,636 INFO  [stdout] (default task-1) -0.5 0 2.5
+2023-10-11 11:48:23,636 INFO  [stdout] (default task-1) [1 2 3 success 1.5 1]
+2023-10-11 11:48:59,971 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 105) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:48:59,976 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 112) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:59,976 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 112) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@52bedbf9
+2023-10-11 11:48:59,977 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 112) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:48:59,980 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 9ms
+2023-10-11 11:48:59,990 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:00,032 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:00,164 INFO  [org.jboss.as.jpa] (MSC service thread 1-2) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:49:00,173 INFO  [org.jipijapa] (MSC service thread 1-3) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:49:00,176 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:49:00,180 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 110) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:49:00,191 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 110) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:00,191 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 110) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:49:00,208 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-6) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:49:00,208 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-6) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@61f69acb, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:49:00,210 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:49:00,231 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 110) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:00,231 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 110) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:49:00,233 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 110) Envers integration enabled? : true
+2023-10-11 11:49:00,297 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 110) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:49:00,307 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:04,777 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:49:23,286 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 112) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:49:23,291 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 116) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:23,291 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 116) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@5be960ec
+2023-10-11 11:49:23,292 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 116) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:23,296 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 10ms
+2023-10-11 11:49:23,307 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:23,346 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:23,466 INFO  [org.jboss.as.jpa] (MSC service thread 1-3) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:49:23,475 INFO  [org.jipijapa] (MSC service thread 1-7) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:49:23,477 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:49:23,481 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 115) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:49:23,498 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 115) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:23,499 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 115) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:49:23,510 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-4) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:49:23,510 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-4) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@794f6aba, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:49:23,512 INFO  [org.jipijapa] (MSC service thread 1-8) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:49:23,532 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 115) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:49:23,532 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 115) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:49:23,534 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 115) Envers integration enabled? : true
+2023-10-11 11:49:23,600 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 115) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:49:23,610 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:49:40,651 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:49:47,835 INFO  [stdout] (default task-1) -0.5 0 1
+2023-10-11 11:49:47,836 INFO  [stdout] (default task-1) []
+2023-10-11 11:50:05,059 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 118) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:50:05,063 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:50:05,063 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 121) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@70b90870
+2023-10-11 11:50:05,064 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 121) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:50:05,068 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 9ms
+2023-10-11 11:50:05,077 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:50:05,115 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:50:05,230 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:50:05,238 INFO  [org.jipijapa] (MSC service thread 1-5) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:50:05,241 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:50:05,244 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 119) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:50:05,250 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 119) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:50:05,250 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 119) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:50:05,273 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-1) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:50:05,273 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-1) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@3b5ea014, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:50:05,275 INFO  [org.jipijapa] (MSC service thread 1-2) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:50:05,294 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 119) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:50:05,294 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 119) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:50:05,296 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 119) Envers integration enabled? : true
+2023-10-11 11:50:05,362 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 119) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:50:05,372 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:52:50,750 INFO  [stdout] (default task-1) -2 0 2.5
+2023-10-11 11:52:50,750 INFO  [stdout] (default task-1) []
+2023-10-11 11:55:23,571 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 122) WFLYUT0022: Unregistered web context: '/src-1.0-SNAPSHOT' from server 'default-server'
+2023-10-11 11:55:23,576 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:55:23,576 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 124) HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerExtendedAccessImpl@3eedc6e5
+2023-10-11 11:55:23,577 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 124) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:55:23,580 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0028: Stopped deployment src-1.0-SNAPSHOT (runtime-name: src-1.0-SNAPSHOT.war) in 9ms
+2023-10-11 11:55:23,591 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:55:23,629 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "src-1.0-SNAPSHOT" (runtime-name: "src-1.0-SNAPSHOT.war")
+2023-10-11 11:55:23,751 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for default
+2023-10-11 11:55:23,759 INFO  [org.jipijapa] (MSC service thread 1-3) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:55:23,762 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment src-1.0-SNAPSHOT.war
+2023-10-11 11:55:23,770 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 127) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+2023-10-11 11:55:23,783 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 127) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:55:23,783 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 127) HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-10-11 11:55:23,796 INFO  [io.jaegertracing.internal.JaegerTracer] (MSC service thread 1-2) No shutdown hook registered: Please call close() manually on application shutdown.
+2023-10-11 11:55:23,796 INFO  [org.wildfly.microprofile.opentracing.smallrye] (MSC service thread 1-2) WFLYTRAC0001: Tracer initialized: JaegerTracer(version=Java-1.6.0, serviceName=src-1.0-SNAPSHOT.war, reporter=RemoteReporter(sender=org.wildfly.extension.microprofile.opentracing.spi.sender.WildFlySender@11c27a65, closeEnqueueTimeout=1000), sampler=ConstSampler(decision=true, tags={sampler.type=const, sampler.param=true}), tags={hostname=art, jaeger.version=Java-1.6.0, ip=192.168.0.102}, zipkinSharedRpcSpan=false, expandExceptionLogs=false, useTraceId128Bit=false)
+2023-10-11 11:55:23,798 INFO  [org.jipijapa] (MSC service thread 1-1) JIPIORMV53020253: Second level cache enabled for src-1.0-SNAPSHOT#default
+2023-10-11 11:55:23,815 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 127) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'src-1.0-SNAPSHOT#default'
+2023-10-11 11:55:23,816 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 127) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-10-11 11:55:23,817 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 127) Envers integration enabled? : true
+2023-10-11 11:55:23,881 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 125) WFLYUT0021: Registered web context: '/src-1.0-SNAPSHOT' for server 'default-server'
+2023-10-11 11:55:23,891 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "src-1.0-SNAPSHOT" (runtime-name : "src-1.0-SNAPSHOT.war")
+2023-10-11 11:55:27,016 INFO  [stdout] (default task-1) null null null
+2023-10-11 11:55:32,036 INFO  [stdout] (default task-1) -1.5 0 2
+2023-10-11 11:55:32,036 INFO  [stdout] (default task-1) []
+2023-10-11 11:55:39,057 INFO  [stdout] (default task-1) -1 2 1.5
+2023-10-11 11:55:39,057 INFO  [stdout] (default task-1) [-1.5 0 2 success 0,200600 Wed Oct 11 11:55:32 GMT+03:00 2023]

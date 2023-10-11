@@ -106,7 +106,7 @@ function clearAll() {
 }
 
 function processResponse(response) {
-    return 0;
+    console.log(response);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

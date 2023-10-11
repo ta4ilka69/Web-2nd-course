@@ -15,6 +15,7 @@ public class AreaCheckServlet extends HttpServlet {
         long startTime = System.nanoTime();
         Date date = new Date(System.currentTimeMillis());
         ArrayList<String> Points = (ArrayList<String>) getServletContext().getAttribute("points");
+        if(Points==null) Points = new ArrayList<String>();
         System.out.println(Points);
         response.setContentType("text/html;charset=UTF-8");
         String xParameter = request.getParameter("x");
@@ -29,7 +30,7 @@ public class AreaCheckServlet extends HttpServlet {
             Points.add(xParameter + " " + yParameter + " " + rParameter + " " + result+ " " + endTime +" "+ date);
             request.setAttribute("Points", Points);
             request.getServletContext().setAttribute("points", Points);
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/table.jsp").forward(request, response);
         }
         catch (Exception e){
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
