@@ -5,8 +5,8 @@ svg.addEventListener("click", (e) => {
     errors.innerHTML = "";
     let r = validateR();
     if (isNumber(r)) {
-        const mouseX = (e.clientX - svg.getBoundingClientRect().left - 150) / 60 * r / 2;
-        const mouseY = -(e.clientY - svg.getBoundingClientRect().top - 150) / 60 * r / 2;
+        const mouseX = parseInt((10000*(e.clientX - svg.getBoundingClientRect().left - 150) / 60 * r / 2).toString())/10000;
+        const mouseY = parseInt((10000*(-(e.clientY - svg.getBoundingClientRect().top - 150) / 60 * r / 2)).toString())/10000;
         const data = {
             "x": mouseX.toString(),
             "y": mouseY.toString(),
