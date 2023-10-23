@@ -510,8 +510,8 @@
         </outbound-socket-binding>
     </socket-binding-group>
     <deployments>
-        <deployment name="src-1.0-SNAPSHOT" runtime-name="src-1.0-SNAPSHOT.war">
-            <fs-exploded path="F:\git\Web\Web-2nd-course\lab2\src\target\src-1.0-SNAPSHOT"/>
+        <deployment name="src-1.0-SNAPSHOT.war" runtime-name="src-1.0-SNAPSHOT.war">
+            <fs-archive path="D:\coding\Web-2nd-course\lab2\target\src-1.0-SNAPSHOT.war"/>
         </deployment>
     </deployments>
 </server>
