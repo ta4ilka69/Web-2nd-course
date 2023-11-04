@@ -28,7 +28,7 @@ public class AreaCheckServlet extends HttpServlet {
             String result = checkArea(x, y, r);
             String endTime = String.format("%.6f",(System.nanoTime()-startTime)/1000000.);
             Points.add(xParameter + " " + yParameter + " " + rParameter + " " + result+ " " + endTime +" "+ date);
-            request.setAttribute("Points", Points);
+            request.setAttribute("Points", Points); 
             request.getServletContext().setAttribute("points", Points);
             request.getRequestDispatcher("/table.jsp").forward(request, response);
         }
