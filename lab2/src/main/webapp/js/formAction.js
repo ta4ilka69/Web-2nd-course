@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = {}
     sending(data).then(response => response.text())
         .then(response => {
-            processResponse(response)
+            processResponse(response);
         })
         .catch(error => console.error("Error:", error));
 });
