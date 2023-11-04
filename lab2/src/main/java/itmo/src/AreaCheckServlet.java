@@ -15,7 +15,7 @@ public class AreaCheckServlet extends HttpServlet {
         long startTime = System.nanoTime();
         Date date = new Date(System.currentTimeMillis());
         ArrayList<String> Points = (ArrayList<String>) getServletContext().getAttribute("points");
-        if(Points==null) Points = new ArrayList<String>();
+        if(Points==null) Points = new ArrayList<>();
         System.out.println(Points);
         response.setContentType("text/html;charset=UTF-8");
         String xParameter = request.getParameter("x");
