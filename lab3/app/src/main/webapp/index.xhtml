@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Lab 3: Clock</title>
+    <link rel="shortcut icon" href="./resources/media/favicon.ico" type="image/x-icon"/>
+    <h:outputStylesheet library="css" name="main.css"/>
+</h:head>
+<f:view>
+<h:body class="barbie-mode" onload="setTimer()">
+    <div class="main-container table-container">
+        <h2>
+            Балин Артем Алексеевич | 2263 | P3212
+        </h2>
+        <p class="mode" onclick="pic(1)" id="barbie-mode">Barbie mode on</p>
+        <p class="mode covered" onclick="pic(2)" id="openheimer-mode">
+            Oppenheimer mode on
+        </p>
+        <p id="clock">
+        </p>
+        <h:link outcome="area" value="Link to the main page" />
+    </div>
+    <h:outputScript library="js" name="time.js" />
+    <h:outputScript library="js" name="client.js" />
+</h:body>
+</f:view>
+</html>
