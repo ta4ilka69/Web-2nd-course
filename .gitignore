@@ -1,3 +1,4 @@
 wildfly/
 **.idea/
 **/out/
+lab3/app/src/main/resources/META-INF/persistence.xml
