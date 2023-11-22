@@ -10,21 +10,22 @@
     <h:outputStylesheet library="css" name="main.css"/>
 </h:head>
 <f:view>
-<h:body class="barbie-mode" onload="setTimer()">
-    <div class="main-container table-container">
-        <h2>
-            Балин Артем Алексеевич | 2263 | P3212
-        </h2>
-        <p class="mode" onclick="pic(1)" id="barbie-mode">Barbie mode on</p>
-        <p class="mode covered" onclick="pic(2)" id="openheimer-mode">
-            Oppenheimer mode on
-        </p>
-        <h3 id="clock">
-        </h3>
-        <h:link outcome="area" value="Link to the main page" styleClass="linking"/>
-    </div>
-    <h:outputScript library="js" name="time.js" />
-    <h:outputScript library="js" name="client.js" />
-</h:body>
+    <h:body class="barbie-mode" onload="setTimer()">
+        <div class="main-container table-container">
+            <h2>
+                Балин Артем Алексеевич | 2263 | P3212
+            </h2>
+            <p class="mode" onclick="pic(1)" id="barbie-mode">Barbie mode on</p>
+            <p class="mode covered" onclick="pic(2)" id="openheimer-mode">
+                Oppenheimer mode on
+            </p>
+            <h3 id="clock">
+            </h3>
+            <h:link outcome="area" value="Link to the main page" styleClass="linking"/>
+        </div>
+        <h:outputScript library="js" name="time.js" />
+        <h:outputScript library="js" name="client.js" />
+    </h:body>
 </f:view>
 </html>
+

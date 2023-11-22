@@ -12,6 +12,5 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
-
     <default-context-path>/lab3</default-context-path>
 </web-app>

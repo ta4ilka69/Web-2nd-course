@@ -15,7 +15,7 @@ public class ValidatorR implements Validator<String> {
     private static final ArrayList<Float> usedR = new ArrayList<>(Arrays.asList(1f, 1.5f, 2f, 2.5f, 3f));
     public void validate(FacesContext context, UIComponent component, String r) throws ValidatorException {
         if(r==null || r.isEmpty()){
-            throw new ValidatorException(new FacesMessage("R musy be selected"));
+            throw new ValidatorException(new FacesMessage("R must be selected"));
         }
         try {
             float value = Float.parseFloat(r);
