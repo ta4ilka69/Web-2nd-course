@@ -23,7 +23,7 @@ public class Dot {
     @Column(name = "responseTime")
     private double responseTime;
 
-    public Dot() {
+    public Dot(){
     }
 
     public Dot(Dot d) {

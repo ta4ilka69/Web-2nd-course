@@ -11,7 +11,7 @@
    <h:outputStylesheet library="css" name="main.css"/>
 </h:head>
 <f:view>
-   <h:body class="barbie-mode" onload="#{dotBean.init()}">
+   <h:body class="barbie-mode">
       <h:outputScript library="js" name="client.js" />
       <h:link outcome="index" value="Go back to clock" styleClass="linking"/>
       <p class="mode" onclick="pic(1)" id="barbie-mode">Barbie mode on</p>
@@ -156,45 +156,78 @@
                </p>
                <div class="input-argument-container">
                   <label class="input-argument">X:</label>
-                  <p>
-                  <h:commandLink value="-2" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="-1.5" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="-1" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="-0.5" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="0" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="0.5" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="1" action="#{dotBean.current.x}"/>
-                  <h:commandLink value="1.5" action="#{dotBean.current.x}"/>
-                  </p>
+                  <div class="links-x">
+                     <h:commandLink value ="-2" action="#{dotBean.setXtoM2()}" styleClass="linking">
+                        <f:ajax execute="@this" render="@none" />
+                     </h:commandLink>
+                        <h:commandLink value ="-1.5" action="#{dotBean.setXtoM15()}" styleClass="linking">
+                            <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="-1" action="#{dotBean.setXtoM1()}" styleClass="linking">
+                            <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="-0.5" action="#{dotBean.setXtoM05()}" styleClass="linking">
+                            <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="0" action="#{dotBean.setXto0()}" styleClass="linking">
+                            <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="0.5" action="#{dotBean.setXto05()}" styleClass="linking">
+                            <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="1" action="#{dotBean.setXto1()}" styleClass="linking">
+                           <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                        <h:commandLink value ="1.5" action="#{dotBean.setXto15()}" styleClass="linking">
+                           <f:ajax execute="@this" render="@none" />
+                        </h:commandLink>
+                     </div>
                </div>
                <div class="input-argument-container">
                   <label class="input-argument">Y:</label>
-                  <h:inputText value="#{dotBean.current.y}" styleClass="text-input" required="true" validator="y-valid"/>
-                  <h:message for="#{dotBean.current.y}"  styleClass="error-message"/>
+                  <h:inputText id = "yInput" value="#{dotBean.y}" styleClass="text-input" required="true">
+                  <f:validator validatorId="y-valid"/>
+                  </h:inputText>
+                  <h:message for="yInput"  styleClass="error-message"/>
                </div>
                <div class="input-argument-container">
                   <label class="input-argument">R:</label><label>
-                  <h:selectBooleanCheckbox value="#{dotBean.current.x==1}" styleClass="input-radio" validator="r-validate" required="true"/>
+                  <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto1()}" styleClass="input-radio">
+                  <f:validator validatorId="r-valid"/>
+                  </h:selectBooleanCheckbox>
+                  <h:message for="rInput" styleClass="error-message"/>
                   1
                </label>
                   <label>
-                     <h:selectBooleanCheckbox value="#{dotBean.current.x==1.5}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setXto15()}" styleClass="input-radio">
+                     <f:validator validatorId="r-valid"/>
+                  </h:selectBooleanCheckbox>
+                     <h:message for="rInput" styleClass="error-message"/>
                      1.5
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox value="#{dotBean.current.x==2}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto2()}" styleClass="input-radio">
+                     <f:validator validatorId="r-valid"/>
+                     </h:selectBooleanCheckbox>
+                     <h:message for="rInput" styleClass="error-message"/>
                      2
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox value="#{dotBean.current.x==2.5}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto25()}" styleClass="input-radio">
+                     <f:validator validatorId="r-valid"/>
+                     </h:selectBooleanCheckbox>
+                     <h:message for="rInput" styleClass="error-message"/>
                      2.5
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox value="#{dotBean.current.x==3}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto3()}" styleClass="input-radio">
+                     <f:validator validatorId="r-valid"/>
+                  </h:selectBooleanCheckbox>
+                     <h:message for="rInput" styleClass="error-message"/>
                      3
                   </label>
+                  <h:commandButton value="Send It!" styleClass="form-button" action="#{dotBean.addDot()}"/>
                </div>
-               <h:commandButton value="Отправить" action="#{dotBean.addDot}" styleClass="submit-button"/>
             </h:form>
          </div>
       </div>

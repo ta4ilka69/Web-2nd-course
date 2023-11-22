@@ -96,7 +96,7 @@ input[type="text"]:focus {
     border-radius: 4px;
 }
 
-#form-button {
+.form-button {
     margin-top: 5vh;
     width: 35vw;
     color: white;
@@ -182,5 +182,12 @@ svg {
 }
 .linking:hover::before{
     width: 100%;
+}
+.links-x{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30vw;
+    margin-top: 10px;
 }
 
