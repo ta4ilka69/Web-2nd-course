@@ -25,10 +25,10 @@ import java.util.List;
             dots = dotsDB.getDots();
             current = new Dot();
         }
-        private void getDots(){
+        public void getDots(){
             dots = dotsDB.getDots();
         }
-        private void addDot(){
+        public void addDot(){
             dotsDB.addDot(current);
             current=new Dot();
             getDots();

@@ -156,6 +156,7 @@
                </p>
                <div class="input-argument-container">
                   <label class="input-argument">X:</label>
+                  <p>
                   <h:commandLink value="-2" action="#{dotBean.current.x}"/>
                   <h:commandLink value="-1.5" action="#{dotBean.current.x}"/>
                   <h:commandLink value="-1" action="#{dotBean.current.x}"/>
@@ -164,7 +165,36 @@
                   <h:commandLink value="0.5" action="#{dotBean.current.x}"/>
                   <h:commandLink value="1" action="#{dotBean.current.x}"/>
                   <h:commandLink value="1.5" action="#{dotBean.current.x}"/>
+                  </p>
                </div>
+               <div class="input-argument-container">
+                  <label class="input-argument">Y:</label>
+                  <h:inputText value="#{dotBean.current.y}" styleClass="text-input" required="true" validator="y-valid"/>
+                  <h:message for="#{dotBean.current.y}"  styleClass="error-message"/>
+               </div>
+               <div class="input-argument-container">
+                  <label class="input-argument">R:</label><label>
+                  <h:selectBooleanCheckbox value="#{dotBean.current.x==1}" styleClass="input-radio" validator="r-validate" required="true"/>
+                  1
+               </label>
+                  <label>
+                     <h:selectBooleanCheckbox value="#{dotBean.current.x==1.5}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     1.5
+                  </label>
+                  <label>
+                     <h:selectBooleanCheckbox value="#{dotBean.current.x==2}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     2
+                  </label>
+                  <label>
+                     <h:selectBooleanCheckbox value="#{dotBean.current.x==2.5}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     2.5
+                  </label>
+                  <label>
+                     <h:selectBooleanCheckbox value="#{dotBean.current.x==3}" styleClass="input-radio" validator="r-validate" required="true"/>
+                     3
+                  </label>
+               </div>
+               <h:commandButton value="Отправить" action="#{dotBean.addDot}" styleClass="submit-button"/>
             </h:form>
          </div>
       </div>
