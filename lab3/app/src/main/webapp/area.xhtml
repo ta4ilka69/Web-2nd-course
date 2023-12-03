@@ -185,51 +185,93 @@
                </div>
                <div class="input-argument-container">
                   <label class="input-argument">Y:</label>
-                  <h:inputText id = "yInput" value="#{dotBean.y}" styleClass="text-input" required="true">
-                  <f:validator validatorId="y-valid"/>
+                  <h:inputText id = "yInput" value="#{dotBean.current.y}" styleClass="text-input">
+                     <f:validator validatorId="y-valid"/>
                   </h:inputText>
                   <h:message for="yInput"  styleClass="error-message"/>
                </div>
                <div class="input-argument-container">
                   <label class="input-argument">R:</label><label>
-                  <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto1()}" styleClass="input-radio">
-                  <f:validator validatorId="r-valid"/>
+                  <h:selectBooleanCheckbox name = "rInput" value="#{dotBean.setRto1}" styleClass="input-radio">
                   </h:selectBooleanCheckbox>
                   <h:message for="rInput" styleClass="error-message"/>
                   1
                </label>
                   <label>
-                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setXto15()}" styleClass="input-radio">
-                     <f:validator validatorId="r-valid"/>
+                     <h:selectBooleanCheckbox name = "rInput" value="#{dotBean.setRto15}" styleClass="input-radio">
                   </h:selectBooleanCheckbox>
                      <h:message for="rInput" styleClass="error-message"/>
                      1.5
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto2()}" styleClass="input-radio">
-                     <f:validator validatorId="r-valid"/>
+                     <h:selectBooleanCheckbox name = "rInput" value="#{dotBean.setRto2}" styleClass="input-radio">
+
                      </h:selectBooleanCheckbox>
                      <h:message for="rInput" styleClass="error-message"/>
                      2
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto25()}" styleClass="input-radio">
-                     <f:validator validatorId="r-valid"/>
+                     <h:selectBooleanCheckbox name = "rInput" value="#{dotBean.setRto25}" styleClass="input-radio">
+                    
                      </h:selectBooleanCheckbox>
                      <h:message for="rInput" styleClass="error-message"/>
                      2.5
                   </label>
                   <label>
-                     <h:selectBooleanCheckbox name = "rInput" onclick="#{dotBean.setRto3()}" styleClass="input-radio">
-                     <f:validator validatorId="r-valid"/>
+                     <h:selectBooleanCheckbox name = "rInput" value="#{dotBean.setRto3}" styleClass="input-radio">
+                    
                   </h:selectBooleanCheckbox>
                      <h:message for="rInput" styleClass="error-message"/>
                      3
                   </label>
-                  <h:commandButton value="Send It!" styleClass="form-button" action="#{dotBean.addDot()}"/>
+                  <h:commandButton value="Send It!" styleClass="form-button" action="#{dotBean.addDot()}">
+                     <f:ajax execute="@form" render="table-results" />
+                  </h:commandButton>
                </div>
             </h:form>
          </div>
+      </div>
+      <div class="table-container">
+         <h:dataTable id="table-results" value="#{dotBean.dotsDB.dots}" var="dot" styleClass="table">
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="argument-column" value="X"/>
+               </f:facet>
+               <h:outputText value="#{dot.x}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="argument-column" value="Y"/>
+               </f:facet>
+               <h:outputText value="#{dot.y}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="argument-column" value="R"/>
+               </f:facet>
+               <h:outputText value="#{dot.r}"/>
+            </h:column>
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="result-column"  value="Result"/>
+               </f:facet>
+               <h:outputText value="#{dotBean.resultInWords(dot.result)}" />
+            </h:column>
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="time-column" value="Received"/>
+               </f:facet>
+               <h:outputText value="#{dot.receivedAt}">
+                  <f:convertDateTime pattern="yyyy-MM-dd HH:mm:ss" timeZone="yourTimeZone" />
+               </h:outputText>
+            </h:column>
+            <h:column>
+               <f:facet name="header">
+                  <h:outputText styleClass="time-column" value="Response"/>
+               </f:facet>
+               <h:outputText value="#{dot.responseTime}"/>
+            </h:column>
+         </h:dataTable>
       </div>
    </h:body>
 </f:view>

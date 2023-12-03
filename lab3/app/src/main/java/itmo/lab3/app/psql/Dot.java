@@ -1,12 +1,14 @@
 package itmo.lab3.app.psql;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+
 
 @Entity
-@Table(name = "dots")
+@Table(name = "Dot")
 public class Dot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id", unique = true)
     private long id;
     @Column(name = "x")
     private double x;
@@ -17,17 +19,16 @@ public class Dot {
     @Column(name = "result")
     private boolean result;
     @Column(name = "receivedAt")
-    private double receivedAt;
+    private long receivedAt;
     @Column(name = "session")
     private String session;
     @Column(name = "responseTime")
-    private double responseTime;
+    private long responseTime;
 
     public Dot(){
     }
 
     public Dot(Dot d) {
-        this.id = d.id;
         this.session = d.session;
         this.x = d.x;
         this.y = d.y;
@@ -44,9 +45,7 @@ public class Dot {
         return circle || rectangle || triangle;
     }
 
-    public static String resultInWords(boolean result) {
-        return result ? "success" : "failure";
-    }
+
     public int getId() {
         return (int) id;
     }
@@ -77,10 +76,10 @@ public class Dot {
     public void setResult(boolean result) {
         this.result = result;
     }
-    public double getReceivedAt() {
+    public long getReceivedAt() {
         return receivedAt;
     }
-    public void setReceivedAt(double receivedAt) {
+    public void setReceivedAt(long receivedAt) {
         this.receivedAt = receivedAt;
     }
     public String getSession() {
@@ -89,10 +88,10 @@ public class Dot {
     public void setSession(String session) {
         this.session = session;
     }
-    public double getResponseTime() {
+    public long getResponseTime() {
         return responseTime;
     }
-    public void setResponseTime(double responseTime) {
+    public void setResponseTime(long responseTime) {
         this.responseTime = responseTime;
     }
 }
