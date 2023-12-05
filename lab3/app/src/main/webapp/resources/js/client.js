@@ -1,5 +1,4 @@
 let audio = new Audio("./resources/media/gg.mp3");
-
 function pic(x) {
     if (x === 1) {
         document.body.classList = "openheimer-mode";
@@ -14,4 +13,7 @@ function pic(x) {
         document.getElementById("openheimer-mode").classList = "mode covered";
         audio.pause();
     }
+}
+function changeR(r){
+    changeRadius([{name: "r", value: r}]);
 }

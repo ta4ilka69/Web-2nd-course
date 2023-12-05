@@ -22,6 +22,7 @@ import java.util.List;
         private static final long serialVersionUID = -8835016776644265867L;
         private DotsDB dotsDB = new DotsDB(FacesContext.getCurrentInstance().getExternalContext().getSessionId(true));
         private Dot current = new Dot();
+        private Dot last = new Dot();
         private List<Dot> dots;
         private boolean setRto1;
         private boolean setRto15;
@@ -50,12 +51,15 @@ import java.util.List;
             System.err.println("starting to add");
             current.setY(this.current.getY());
             System.err.println("set y");
+            current.setReceivedAt(System.nanoTime());
             Dot added=new Dot(current);
             System.err.println("dot added created");
-            added.setReceivedAt(System.currentTimeMillis());
             System.err.println("time set");
             dotsDB.addDot(added);
             System.err.println("dot added to db");
+            last.setX(current.getX()*120/current.getR()+150);
+            last.setY(150-current.getY()*120/current.getR());
+            last.setResult(added.getResult());
             getDots();
             current = new Dot();
             current.setSession(FacesContext.getCurrentInstance().getExternalContext().getSessionId(true));
@@ -95,5 +99,45 @@ import java.util.List;
         }
         public static String resultInWords(boolean result) {
             return result ? "success" : "failure";
+        }
+        public static String resultInColor(boolean result) {
+            return result ? "green" : "red";
+        }
+        public void executeAddPoint(){
+            double x = getParam("x");
+            double y = getParam("y");
+            double r = getParam("r");
+            newR(r);
+            current.setX(x);
+            current.setY(y);
+            addDot();
+        }
+        private void newR(double r){
+            setRto1 = false;
+            setRto15 = false;
+            setRto2 = false;
+            setRto25 = false;
+            setRto3 = false;
+            if(r == 1){
+                setRto1 = true;
+            } else if(r == 1.5){
+                setRto15 = true;
+            } else if(r == 2){
+                setRto2 = true;
+            } else if(r == 2.5){
+                setRto25 = true;
+            } else if(r == 3){
+                setRto3 = true;
+            }
+        }
+        private double getParam(String param){
+            return Double.parseDouble(FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get(param));
+        }
+        public void changeRadius(){
+            double r = getParam("r");
+            newR(r);
+            last.setX((last.getX()-150)*last.getR()/r+150);
+            last.setY(150-((150-last.getY())*last.getR()/r));
+            last.setR(r);
         }
     }

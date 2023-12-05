@@ -1,6 +1,7 @@
 package itmo.lab3.app.psql;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
@@ -35,7 +36,8 @@ public class Dot {
         this.r = d.r;
         this.result = check();
         this.receivedAt = d.receivedAt;
-        this.responseTime = System.currentTimeMillis() - d.receivedAt;
+        Date date = new Date();
+        this.responseTime = System.nanoTime()-receivedAt;
     }
 
     private boolean check() {
