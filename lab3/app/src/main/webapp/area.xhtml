@@ -35,18 +35,18 @@
             <p>
               <ui:fragment rendered="#{not empty dotBean.last}">
               <svg xmlns="http://www.w3.org/2000/svg" id="svg" onclick="handleClick(event)">
-                <line x1="0" y1="150" x2="300" y2="150" stroke="#000720"></line>
-                <line x1="150" y1="0" x2="150" y2="300" stroke="#000720"></line>
+                <line x1="0" y1="150" x2="300" y2="150" stroke="#000720"/>
+                <line x1="150" y1="0" x2="150" y2="300" stroke="#000720"/>
                 <polygon
                   points="300,150 295,155 295, 145"
                   fill="#000720"
                   stroke="#000720"
-                ></polygon>
+                />
                 <polygon
                   points="150,0 145,5 155,5"
                   fill="#000720"
                   stroke="#000720"
-                ></polygon>
+                />
                 <text x="282" y="170">x</text>
                 <text x="163" y="14">y</text>
                 <line
@@ -55,7 +55,7 @@
                   x2="270"
                   y2="152"
                   stroke="#000720"
-                ></line>
+                />
                 <text x="265" y="140">
                   <tspan class="graph_value">R</tspan>
                 </text>
@@ -65,27 +65,27 @@
                   x2="210"
                   y2="152"
                   stroke="#000720"
-                ></line>
+                />
                 <text x="200" y="140">
                   <tspan class="graph_value">R</tspan>
                   /2
                 </text>
-                <line x1="90" y1="148" x2="90" y2="152" stroke="#000720"></line>
+                <line x1="90" y1="148" x2="90" y2="152" stroke="#000720"/>
                 <text x="75" y="140">
                   -
                   <tspan class="graph_value">R</tspan>
                   /2
                 </text>
-                <line x1="30" y1="148" x2="30" y2="152" stroke="#000720"></line>
+                <line x1="30" y1="148" x2="30" y2="152" stroke="#000720"/>
                 <text x="20" y="140">
                   -
                   <tspan class="graph_value">R</tspan>
                 </text>
-                <line x1="148" y1="30" x2="152" y2="30" stroke="#000720"></line>
+                <line x1="148" y1="30" x2="152" y2="30" stroke="#000720"/>
                 <text x="156" y="35">
                   <tspan class="graph_value">R</tspan>
                 </text>
-                <line x1="148" y1="90" x2="152" y2="90" stroke="#000720"></line>
+                <line x1="148" y1="90" x2="152" y2="90" stroke="#000720"/>
                 <text x="156" y="95">
                   <tspan class="graph_value">R</tspan>
                   /2
@@ -96,7 +96,7 @@
                   x2="152"
                   y2="210"
                   stroke="#000720"
-                ></line>
+                />
                 <text x="156" y="215">
                   -
                   <tspan class="graph_value">R</tspan>
@@ -108,7 +108,7 @@
                   x2="152"
                   y2="270"
                   stroke="#000720"
-                ></line>
+                />
                 <text x="156" y="275">
                   -
                   <tspan class="graph_value">R</tspan>
@@ -117,12 +117,12 @@
                   points="300,150 295,155 295, 145"
                   fill="#000720"
                   stroke="#000720"
-                ></polygon>
+                />
                 <polygon
                   points="150,0 145,5 155,5"
                   fill="#000720"
                   stroke="#000720"
-                ></polygon>
+                />
                 <rect
                   x="150"
                   y="150"
@@ -131,19 +131,19 @@
                   fill-opacity="0.4"
                   stroke="navy"
                   fill="blue"
-                ></rect>
+                />
                 <polygon
                   points="30,150 150,150 150,270"
                   fill-opacity="0.4"
                   stroke="navy"
                   fill="blue"
-                ></polygon>
+                />
                 <path
                   d="M150 150 L30 150 A120 120 0 0 1 150 30 Z"
                   fill-opacity="0.4"
                   stroke="navy"
                   fill="blue"
-                ></path>
+                />
                 <circle cx="#{dotBean.last.x}" cy="#{dotBean.last.y}" r="3" fill="#{dotBean.resultInColor(dotBean.last.result)}" />
               </svg>
               </ui:fragment>
@@ -227,7 +227,6 @@
                   value="#{dotBean.setRto1}"
                   styleClass="input-radio"
                   onclick="changeR(1)"
-
                 >
                 </h:selectBooleanCheckbox>
                 
