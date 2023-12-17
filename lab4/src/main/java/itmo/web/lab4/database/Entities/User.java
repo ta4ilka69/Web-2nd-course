@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -17,4 +19,10 @@ public class User {
     private String username;
     @Column (name = "password", nullable = false)
     private String password;
+    @Column (name = "token", nullable = false)
+    private String token;
+    @Column (name = "token_expire_date", nullable = false)
+    private LocalDateTime tokenExpireDate;
+    @Column (name = "email", nullable = false)
+    private String email;
 }
