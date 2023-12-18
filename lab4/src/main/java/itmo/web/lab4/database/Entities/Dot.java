@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "dots")
 @Getter
 @Setter
-public class Dot {
+public class Dot implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -29,4 +30,26 @@ public class Dot {
     private LocalDateTime recieveTime;
     @Column(name = "execution_time", nullable = false)
     private long executionTime;
+    public Dot(double x, double y, double r, LocalDateTime time, long timeS, User user){
+        long start = System.currentTimeMillis();
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.recieveTime = time;
+        this.user = user;
+        this.result = checkResult(x, y, r);
+        this.executionTime = timeS-start;
+    }
+    private boolean checkResult(double x, double y, double r){
+        if(x<=0&&y>=0){
+            return (x>-r&&y<r);
+        }
+        if(x>=0&&y>=0){
+            return ((x*x+y*y)<((r/2)*(r/2)));
+        }
+        if(x>=0&&y<=0){
+            return (y>x-r/2);
+        }
+        return false;
+    }
 }
