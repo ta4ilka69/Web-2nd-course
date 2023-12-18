@@ -3,9 +3,6 @@ package itmo.web.lab4.database.Entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -19,10 +16,8 @@ public class User {
     private String username;
     @Column (name = "password", nullable = false)
     private String password;
-    @Column (name = "token", nullable = false)
-    private String token;
-    @Column (name = "token_expire_date", nullable = false)
-    private LocalDateTime tokenExpireDate;
     @Column (name = "email", nullable = false)
     private String email;
+    @Column(name = "is_confirmed")
+    private boolean is_confirmed;
 }
