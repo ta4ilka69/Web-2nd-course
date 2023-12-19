@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import TextboxLogin from "../subcomponents/TextboxLogin";
 import ButtonLogin from "../subcomponents/ButtonLogin";
+import { useDispatch } from "react-redux";
+import { setToken } from "../redux/slice";
+import { useNavigate } from "react-router-dom";
+import Alerts from "../subcomponents/Alerts";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [error, setError] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -18,11 +24,13 @@ const Login = () => {
       });
 
       if (response.ok) {
-        window.location.replace("/");
+        const data = await response.json();
         console.log("Login successful!");
+        dispatch(setToken(data.token));
+        navigate("/");
       } else {
-        const errorText = await response.text();
-        console.error("Login failed:", errorText);
+        const data = await response.json();
+        setError(data.message);
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -33,13 +41,14 @@ const Login = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="inputColumn">
-        <TextboxLogin
-        username={username}
-        setUsername={setUsername}
-        password={password}
-        setPassword={setPassword}
-        />
-        <ButtonLogin />
+          <TextboxLogin
+            username={username}
+            setUsername={setUsername}
+            password={password}
+            setPassword={setPassword}
+          />
+          {error && <Alerts message={error} />}
+          <ButtonLogin />
         </div>
       </form>
     </div>

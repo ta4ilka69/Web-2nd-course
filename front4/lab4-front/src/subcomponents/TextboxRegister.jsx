@@ -23,7 +23,7 @@ const TextboxReg = ({ username,email, password, setUsername,setEmail, setPasswor
          <TextField
           required
           id="outlined-required"
-          label="Username"
+          label="Email"
           defaultValue={email}
           onChange={(e) => setEmail(e.target.value)}
         />

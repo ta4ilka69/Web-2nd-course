@@ -23,6 +23,7 @@ public class RegisterController {
     private UserRepository userRepository;
     @Autowired
     private CodeRepository codeRepository;
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/register")
     public ResponseEntity<String> login(@RequestBody RegRequest reg, HttpServletResponse response){
         String code = TokenGeneration.generateToken();
@@ -43,6 +44,7 @@ public class RegisterController {
         return ResponseEntity.ok("Check your email");
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/confirm/{code}")
     public ResponseEntity<String> confirm(@PathVariable String code){
         Code c = codeRepository.findByCode(code);

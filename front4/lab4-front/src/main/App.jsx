@@ -5,15 +5,38 @@ import Header from "./Header";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Dots from "../components/Dots";
+import ProtectedRoute from "./ProtectedRoute";
+import Unprotected from "./Unprotected";
 
 const App = () => (
   <div>
     <Header />
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dots />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Dots />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <Unprotected>
+              <Login />
+            </Unprotected>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Unprotected>
+              <Register/>
+            </Unprotected>
+          }
+        />
       </Routes>
     </BrowserRouter>
     <Footer />

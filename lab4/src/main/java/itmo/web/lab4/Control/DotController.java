@@ -23,6 +23,7 @@ public class DotController {
     private UserRepository userRepository;
     @Autowired
     private TokensRepository tokensRepository;
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/")
     public ResponseEntity<List<Dot>> getDots(@CookieValue(value = "SESSION_ID", required = false) String token){
         Token t = tokensRepository.findByToken(token);
@@ -34,6 +35,7 @@ public class DotController {
         }
         return ResponseEntity.ok(dotRepository.findAllByUserId(t.getUser().getId()));
     }
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/new-dot")
     public ResponseEntity<String> addNewDot(@RequestBody DotRequest dotRequest, @CookieValue(value = "SESSION_ID", required = false) String token){
         Token t = tokensRepository.findByToken(token);
