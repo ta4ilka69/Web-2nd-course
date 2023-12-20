@@ -15,8 +15,8 @@ export const validateInputs = (x, y, r, setError) => {
     setError("y is out of range");
     return false;
   }
-  if (r1 < 1 || r1 > 5) {
-    setError("r is out of range");
+  if (r1 <=0 || r1 > 5) {
+    setError("r must be in (0;5]");
     return false;
   }
   return true;

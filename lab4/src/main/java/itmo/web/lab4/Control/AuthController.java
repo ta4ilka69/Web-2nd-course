@@ -35,7 +35,7 @@ public class AuthController {
         }
         String tokenValue = TokenGeneration.generateToken();
         Token token = new Token();
-        token.setTokenExpireDate(LocalDateTime.now().plusHours(10));
+        token.setTokenExpireDate(LocalDateTime.now().plusHours(100));
         token.setUser(user);
         token.setToken(tokenValue);
         tokensRepository.save(token);

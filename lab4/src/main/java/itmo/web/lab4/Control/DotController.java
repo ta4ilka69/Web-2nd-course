@@ -1,6 +1,7 @@
 package itmo.web.lab4.Control;
 
 import itmo.web.lab4.RequestResponseData.DotRequest;
+import itmo.web.lab4.RequestResponseData.DotsResponse;
 import itmo.web.lab4.RequestResponseData.LogoutRequest;
 import itmo.web.lab4.database.Entities.Dot;
 import itmo.web.lab4.database.Entities.Token;
@@ -13,7 +14,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/")
@@ -24,27 +27,42 @@ public class DotController {
     private UserRepository userRepository;
     @Autowired
     private TokensRepository tokensRepository;
-    @CrossOrigin(origins = "http://localhost:5173")
-    @GetMapping("/")
-    public ResponseEntity<List<Dot>> getDots(@RequestBody LogoutRequest logoutRequest){
-        Token t = tokensRepository.findByToken(logoutRequest.getToken());
+    @CrossOrigin(origins = "http://localhost:5173/")
+    @GetMapping("/dots/{token}")
+    public ResponseEntity<List<DotsResponse>> getDots(@PathVariable String token){
+        Token t = tokensRepository.findByToken(token);
+        System.err.println(token);
         if(t==null){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
         }
-        if(t.getTokenExpireDate().isAfter(LocalDateTime.now())){
+        if(t.getTokenExpireDate().isBefore(LocalDateTime.now())){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
         }
-        return ResponseEntity.ok(dotRepository.findAllByUserId(t.getUser().getId()));
+        List<Dot> dots = dotRepository.findAllByUserId(t.getUser().getId());
+        List<DotsResponse> dotDTOs = dots.stream()
+                .map(dot -> {
+                    DotsResponse dotDTO = new DotsResponse();
+                    dotDTO.setX(dot.getX());
+                    dotDTO.setY(dot.getY());
+                    dotDTO.setR(dot.getR());
+                    dotDTO.setResult(dot.isResult());
+                    dotDTO.setReceivedAt(dot.getRecieveTime());
+                    dotDTO.setExecutionTime(dot.getExecutionTime());
+                    return dotDTO;
+                }).toList();
+        return ResponseEntity.ok(dotDTOs);
     }
     @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/new-dot")
     public ResponseEntity<String> addNewDot(@RequestBody DotRequest dotRequest){
         Token t = tokensRepository.findByToken(dotRequest.getToken());
+        System.err.println(dotRequest.getToken());
         if(t==null){
+            System.err.println("not found");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
         }
-        if(t.getTokenExpireDate().isAfter(LocalDateTime.now())){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Your session is expired. Please, log in again");
+        if(t.getTokenExpireDate().isBefore(LocalDateTime.now())){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
         }
         Dot dot = new Dot(dotRequest.getX(), dotRequest.getY(), dotRequest.getR(), LocalDateTime.now(), System.currentTimeMillis(), t.getUser());
         dotRepository.save(dot);

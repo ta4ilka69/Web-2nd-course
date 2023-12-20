@@ -23,14 +23,15 @@ body {
   background-color: #000000 !important;
   color: aliceblue !important;
   bottom: 0 !important;
+  box-sizing: border-box;
 }
 .header{
   top: 0;
 }
 .github,
 .telegram {
-  height: 5vh;
-  width: 5vh;
+  height: 4.7vh;
+  width: 4.7vh;
   background-color: #f0f8ff;
   background-position: center;
   border-radius: 0.5vh;
@@ -44,3 +45,16 @@ body {
   width: 100vw;
   padding: 1vh;
 }
+@media screen and (max-width: 800px) {
+  .headers{
+    height: 6vh;
+    width: 120vw;
+  }
+  .MuiTypography-h6 {
+    font-size: 20vh !important;
+  }
+  .MuiInputBase-input{
+    height: 10vh;
+    font-size: 8vh;
+  }
+};

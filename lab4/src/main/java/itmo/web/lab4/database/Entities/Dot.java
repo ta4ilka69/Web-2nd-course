@@ -1,7 +1,9 @@
 package itmo.web.lab4.database.Entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
@@ -11,11 +13,13 @@ import java.time.LocalDateTime;
 @Table(name = "dots")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Dot implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
     @Column(name = "x", nullable = false)
