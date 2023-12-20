@@ -7,12 +7,10 @@ import { useSelector } from "react-redux";
 import { Alerts } from "../subcomponents/Alerts";
 import { validateInputs } from "../subcomponents/DotInputChecker.jsx";
 
-const TextboxDots = () => {
+const TextboxDots = ({r,setR, error, setError}) => {
   const user = useSelector((state) => state.user);
   const [x, setX] = useState("");
   const [y, setY] = useState("");
-  const [r, setR] = useState("");
-  const [error, setError] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

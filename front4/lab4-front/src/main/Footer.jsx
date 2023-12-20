@@ -6,7 +6,7 @@ function Footer() {
       <a href="https://github.com/ta4ilka69">
       <img src="./src/resources/github.svg" className="github"/>
       </a>
-      <p>Happy new 2024</p>
+      <p className="NewYear">Happy new 2024</p>
       <a href="https://t.me/ta4ilka">
         <img src="./src/resources/telegram.svg" className="telegram"/>
       </a>

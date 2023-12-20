@@ -45,7 +45,7 @@ body {
   width: 100vw;
   padding: 1vh;
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width:100px) and (max-width: 900px) {
   .headers{
     height: 6vh;
     width: 120vw;
@@ -56,5 +56,8 @@ body {
   .MuiInputBase-input{
     height: 10vh;
     font-size: 8vh;
+  }
+  .NewYear{
+    font-size: large;
   }
 };

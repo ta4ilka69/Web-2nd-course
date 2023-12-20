@@ -8,7 +8,49 @@ import { useSelector } from "react-redux";
 
 const Dots = () => {
   const user = useSelector((state) => state.user);
+  const handleSvgClick = (e) => {
+    console.log("click");
+    if (r === "" || r === undefined || r === null) {
+      setError("Enter R first");
+
+      return;
+    }
+    const svg = e.target;
+    const rect = svg.getBoundingClientRect();
+
+    const mouseX = ((e.clientX - rect.left - 150) * ( r)) / 120;
+    const mouseY = -((e.clientY - rect.top - 150) * ( r)) / 120;
+
+    const vata = {
+      x: parseFloat(mouseX.toFixed(4)), // Round to 4 decimal places
+      y: parseFloat(mouseY.toFixed(4)), // Round to 4 decimal places
+      r: r,
+      token: user.user.token,
+    };
+    console.log(vata);
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:6969/new-dot", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(vata),
+        });
+        if (response.ok) {
+          window.location.reload();
+        } else {
+          setError("Error connecting to server");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  };
   const [dots, setDots] = useState([]);
+  const [error, setError] = useState("");
+  const [r, setR] = useState("");
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +82,12 @@ const Dots = () => {
       <Header />
       <div className="main-container">
         <div className="form-container">
-          <svg xmlns="http://www.w3.org/2000/svg" className="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="svg"
+            pointerEvents="all"
+            onClick={handleSvgClick}
+          >
             <line x1="0" y1="150" x2="300" y2="150" stroke="#000720"></line>
             <line x1="150" y1="0" x2="150" y2="300" stroke="#000720"></line>
             <polygon
@@ -126,8 +173,18 @@ const Dots = () => {
               stroke="navy"
               fill="blue"
             ></path>
+            {dots.map((dot) => (
+              <circle
+                key={dot.receivedAt}
+                cx={(dot.x * 120) / parseFloat(r.replace(",", ".")) + 150}
+                cy={150 - (dot.y * 120) / parseFloat(r.replace(",", "."))}
+                r="3"
+                fill={dot.result ? "green" : "red"}
+                stroke="red"
+              ></circle>
+            ))}
           </svg>
-          <TextBoxDots />
+          <TextBoxDots r={r} setR={setR} error={error} setError={setError} />
         </div>
         <div className="table-container">
           <Table dots={dots} />

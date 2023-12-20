@@ -35,9 +35,9 @@ public class DotController {
         if(t==null){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
         }
-        if(t.getTokenExpireDate().isBefore(LocalDateTime.now())){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
-        }
+       // if(t.getTokenExpireDate().isBefore(LocalDateTime.now())||true){
+       //     return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+       // }
         List<Dot> dots = dotRepository.findAllByUserId(t.getUser().getId());
         List<DotsResponse> dotDTOs = dots.stream()
                 .map(dot -> {
@@ -61,9 +61,9 @@ public class DotController {
             System.err.println("not found");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
         }
-        if(t.getTokenExpireDate().isBefore(LocalDateTime.now())){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
-        }
+       // if(t.getTokenExpireDate().isBefore(LocalDateTime.now())){
+       //     return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
+       // }
         Dot dot = new Dot(dotRequest.getX(), dotRequest.getY(), dotRequest.getR(), LocalDateTime.now(), System.currentTimeMillis(), t.getUser());
         dotRepository.save(dot);
         return ResponseEntity.ok("OK");
