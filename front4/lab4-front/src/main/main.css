@@ -1,0 +1,32 @@
+.success {
+    color: green;
+}
+
+.barbie-mode {
+    background: linear-gradient(#63ecef, #ff22c4);
+}
+
+.decart {
+    border-radius: 95px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 90vh;
+}
+
+
+.table-container {
+    flex-direction: column;
+    align-content:baseline;
+}
+
+.svg{
+    background-color: aliceblue;
+    width: 300px;
+    height: 300px;
+    border-radius: 30%;
+    margin: 5vw;
+}

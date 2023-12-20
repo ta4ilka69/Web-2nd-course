@@ -11,4 +11,5 @@ public class DotRequest {
     private double x;
     private double y;
     private double r;
+    private String token;
 }

@@ -4,7 +4,10 @@ import ButtonLogin from "../subcomponents/ButtonLogin";
 import { useDispatch } from "react-redux";
 import { setToken } from "../redux/slice";
 import { useNavigate } from "react-router-dom";
-import Alerts from "../subcomponents/Alerts";
+import { Alerts } from "../subcomponents/Alerts";
+import { hashPassword } from "../subcomponents/Hash";
+import Header from "../main/Header";
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,14 +18,15 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      let hashedPassword = await hashPassword(password);
       const response = await fetch("http://localhost:6969/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ login: username, password }),
+        body: JSON.stringify({ login: username, password: hashedPassword }),
       });
-
+      console.log(hashPassword(password));
       if (response.ok) {
         const data = await response.json();
         console.log("Login successful!");
@@ -36,9 +40,9 @@ const Login = () => {
       console.error("Error during login:", error);
     }
   };
-
   return (
     <div>
+      <Header/>
       <form onSubmit={handleSubmit}>
         <div className="inputColumn">
           <TextboxLogin
@@ -48,7 +52,9 @@ const Login = () => {
             setPassword={setPassword}
           />
           {error && <Alerts message={error} />}
-          <ButtonLogin />
+          <div className="buttonRaw">
+            <ButtonLogin />
+          </div>
         </div>
       </form>
     </div>

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Footer";
-import Header from "./Header";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Dots from "../components/Dots";
@@ -10,7 +9,6 @@ import Unprotected from "./Unprotected";
 
 const App = () => (
   <div>
-    <Header />
     <BrowserRouter>
       <Routes>
         <Route

@@ -1,6 +1,7 @@
 package itmo.web.lab4.Control;
 
 import itmo.web.lab4.RequestResponseData.DotRequest;
+import itmo.web.lab4.RequestResponseData.LogoutRequest;
 import itmo.web.lab4.database.Entities.Dot;
 import itmo.web.lab4.database.Entities.Token;
 import itmo.web.lab4.database.Reps.DotRepository;
@@ -25,8 +26,8 @@ public class DotController {
     private TokensRepository tokensRepository;
     @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/")
-    public ResponseEntity<List<Dot>> getDots(@CookieValue(value = "SESSION_ID", required = false) String token){
-        Token t = tokensRepository.findByToken(token);
+    public ResponseEntity<List<Dot>> getDots(@RequestBody LogoutRequest logoutRequest){
+        Token t = tokensRepository.findByToken(logoutRequest.getToken());
         if(t==null){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
         }
@@ -37,8 +38,8 @@ public class DotController {
     }
     @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/new-dot")
-    public ResponseEntity<String> addNewDot(@RequestBody DotRequest dotRequest, @CookieValue(value = "SESSION_ID", required = false) String token){
-        Token t = tokensRepository.findByToken(token);
+    public ResponseEntity<String> addNewDot(@RequestBody DotRequest dotRequest){
+        Token t = tokensRepository.findByToken(dotRequest.getToken());
         if(t==null){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No access");
         }

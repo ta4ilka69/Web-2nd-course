@@ -20,9 +20,12 @@ const userSlice = createSlice({
       state.state.isFetching = false;
       state.user.token = action.payload;
     },
+    clearToken: (state) => {
+      state.user.token = null;
+    },
   },
 });
 
-export const { setIsFetching, setToken } = userSlice.actions;
+export const { setIsFetching, setToken, clearToken } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -9,6 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RegRequest {
     private String login;
-    private String password;
     private String email;
+    private String password;
 }
