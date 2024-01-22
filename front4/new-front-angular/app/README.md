@@ -8,6 +8,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4. No changes on server side
 5. Authentication token from already existing database (in case to fullfill request to server)
 # Main
-<video src="demo.mp4" controls ></video>
+<video src="./demo.mp4" controls ></video>
 # Me
 [Telegram](https://t.me/ta4ilka)
