@@ -1,0 +1,22 @@
+.credits{
+    color: aliceblue;
+    font-size: 3vmin;
+    width: 20vw;
+    height: 3vmin;
+    margin-top: 1vmin;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: black;
+    width: 98vw;
+    height: 6vmin;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2.5vmin;
+    border: 0.5vmin solid aliceblue;
+}
+.mode{
+    margin-top: 8.5vmin;
+}

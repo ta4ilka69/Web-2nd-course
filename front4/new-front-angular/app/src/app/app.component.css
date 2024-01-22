@@ -1,0 +1,12 @@
+.main-container{
+    margin-top: 1vmin;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    width: 100vw;
+}
+.app-form{
+    width: 50vw;
+    box-sizing: border-box;
+    min-width: 350px;
+}

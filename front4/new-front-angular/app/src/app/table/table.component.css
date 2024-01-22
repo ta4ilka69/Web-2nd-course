@@ -1,0 +1,11 @@
+.table-container{
+    width: 90%;
+    margin-top: 8vmin;
+    box-sizing: border-box;
+}
+.table-results{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
