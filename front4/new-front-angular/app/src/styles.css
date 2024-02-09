@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;600&display=swap");
+
+.barbie-mode {
+  background: linear-gradient(#63ecef, #ff22c4);
+}
+.oppenheimer-mode {
+  background-image: url("./assets/Oppenheimer-first-person-script-01-Mainstyle.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: aliceblue;
+  background-size: cover;
+}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
+body {
+  min-height: 100vh;
+  font-family: "Playpen Sans", sans-serif !important;
+  text-align: center;
+}
+.zero {
+  margin: 0;
+  padding: 0;
+}
+p:hover,
+h2:hover,
+label:hover {
+  color: #ff8f0e;
+}
+
+.full-width {
+  width: 100%;
+}
+.center{
+  align-items: center;
+}

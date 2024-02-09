@@ -1,0 +1,8 @@
+<div class="form-container">
+  <form (submit) ="onSubmit($event)" class="flex column center">
+    <app-input (valueChange)="handleInputChange($event)" [label]="'X'" [min]="-5"> </app-input>
+    <app-input (valueChange)="handleInputChange($event)" [label]="'Y'" [min]= "-5"> </app-input>
+    <app-input (valueChange)="handleInputChange($event)" [label]="'R'" [min]= "1"> </app-input>
+    <button mat-raised-button color="accent">Send it!</button>
+  </form>
+</div>

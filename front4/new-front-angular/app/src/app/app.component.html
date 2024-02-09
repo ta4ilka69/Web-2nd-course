@@ -1,0 +1,7 @@
+<div class="flex column">
+    <app-header></app-header>
+    <div class="main-container flex row">
+        <app-form (formSubmit)="handleFormSubmit($event)" class="app-form zero"></app-form>
+        <app-table [dots]="dots" class="app-form zero"></app-table>
+    </div>
+</div>

@@ -48,14 +48,14 @@ body {
 @media screen and (min-width:100px) and (max-width: 900px) {
   .headers{
     height: 6vh;
-    width: 120vw;
+    width: 100vw;
   }
   .MuiTypography-h6 {
-    font-size: 20vh !important;
+    font-size: 2vh !important;
   }
   .MuiInputBase-input{
-    height: 10vh;
-    font-size: 8vh;
+    height: 3vh;
+    font-size: 2vh;
   }
   .NewYear{
     font-size: large;

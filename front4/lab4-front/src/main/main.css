@@ -15,6 +15,9 @@
     flex-direction: row;
     align-items: center;
     min-height: 90vh;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+    margin-bottom: 7vh;
 }
 .inputC{
     width: 50vw !important;
@@ -34,6 +37,7 @@
     flex-direction: column;
     align-content:baseline;
     margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 .svg{

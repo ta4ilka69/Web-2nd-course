@@ -1,0 +1,22 @@
+<mat-form-field class="input-value">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    type="text"
+    matInput
+    [formControl]="valueInputControl"
+    placeholder="Value in [{{ min }};5]"
+    (input)="onInputChange()"
+  />
+  @if (valueInputControl.hasError('required')) {
+  <mat-error>Value is <strong>required</strong></mat-error>
+
+  }@else if (valueInputControl.hasError('max')) {
+  <mat-error>Value must be <strong> less than 5</strong></mat-error>
+  } @else if(valueInputControl.hasError('min')) {
+  <mat-error
+    >Value must be <strong> greater than {{ min }}</strong></mat-error
+  >
+  } @else if (valueInputControl.hasError('nonNumeric')) {
+  <mat-error>Value must a be a <strong>float</strong></mat-error>
+  }
+</mat-form-field>

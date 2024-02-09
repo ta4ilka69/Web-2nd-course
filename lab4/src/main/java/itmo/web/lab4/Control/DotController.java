@@ -27,9 +27,10 @@ public class DotController {
     private UserRepository userRepository;
     @Autowired
     private TokensRepository tokensRepository;
-    @CrossOrigin(origins = "http://localhost:5173/")
+    @CrossOrigin(origins = "http://localhost:4200/")
     @GetMapping("/dots/{token}")
     public ResponseEntity<List<DotsResponse>> getDots(@PathVariable String token){
+        System.err.println("new request");
         Token t = tokensRepository.findByToken(token);
         System.err.println(token);
         if(t==null){
@@ -52,9 +53,10 @@ public class DotController {
                 }).toList();
         return ResponseEntity.ok(dotDTOs);
     }
-    @CrossOrigin(origins = "http://localhost:5173")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/new-dot")
     public ResponseEntity<String> addNewDot(@RequestBody DotRequest dotRequest){
+        System.err.println("new request");
         Token t = tokensRepository.findByToken(dotRequest.getToken());
         System.err.println(dotRequest.getToken());
         if(t==null){
